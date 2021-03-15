@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Baptiste Odet</title>
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="modal.css">
+    <meta name="viewport" content="width=750">
+</head>
+<body>
+    <div class="panel"></div>
+    <a href="index.html" id="myname">Baptiste Odet</a>
+    <div class="sidebar">
+        <a class="menu-btn">
+            <div class="hamburger">
+                <div></div>                    
+                <div></div>                    
+                <div></div>                    
+            </div>
+            <span>MENU</span>
+        </a>
+        <div class="menu-content">
+            <div class="container">
+                <a href="index.html" class="menu-item">
+                    <div style="background: rgb(191, 255, 205);"></div>
+                    <span>Accueil</span>
+                </a>
+                <a href="projects.html" class="menu-item">
+                    <div style="background: rgb(255, 191, 191);"></div>
+                    <span>Projets</span>
+                </a>
+                <a href="contact.html" class="menu-item">
+                    <div style="background: rgb(255, 191, 250);"></div>
+                    <span>Contact</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="background">
+        <span>PROJECTS</span>
+        <span>PROJECTS</span>
+    </div>
+
+    <div id="main">
+        <div class="container">
+            <div class="controls">
+                <a href="noisevisualizer.html" class="previous">
+                    <span class="arrow">&larr;</span>
+                    <span>Précédent</span>
+                </a>
+                <a href="boids.html" class="next">
+                    <span>Suivant</span>
+                    <span class="arrow">&rarr;</span>
+                </a>
+            </div>
+            <video controls>
+                <source src="data/WorkoutTimer_overview.mp4"
+                        type="video/mp4">
+            
+                Sorry, your browser doesn't support embedded videos.
+            </video>
+            <div class="header">
+                <div class="name">
+                    <h1>Workout Timer</h1>
+                </div>
+                <span class="desc">Application pour smartphone donnant accès à un timer spécifique pour les séances de sport.</span>
+                <div class="separator"></div>
+                <div class="global-infos">
+                    <div class="global-infos-item">
+                        <span>Type</span>
+                        <span>Application</span>
+                    </div>
+                    <div class="global-infos-item">
+                        <span>Date</span>
+                        <span>2019</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section center">
+            <div class="title">
+                <span>Description</span>
+            </div>
+            <div class="text">
+               Ayant besoin d'un timer spécial pour mes séances de sport et les applications existantes ne répondant pas 
+               à mes besoins, j'ai décidé de créer ma propre application. Cette application fonctionne sous android et permet donc de 
+               paramètrer des séances avec un nombre de répétition et un temps de travail variable.
+               </br></br>
+               Fonctionnalités :
+               <ul>
+                   <li>Séance paramètrable avec : nombre de set, temps de travail par set, temps de repos par set.</li>
+                   <li>Configurer et sauvegarder des séances.</li>
+                   <li>Avertissement sonore lorsque le temps de travail est terminé.</li>
+               </ul> 
+               L'application reste très simple pour une rapidité d'utilisation maximum sans se perdre avec la multitude d'options que certaines
+               applications proposent.
+            </div>
+
+            <div class="title">
+                <span>Comment ?</span>
+            </div>
+            <div class="text">
+               L'application est développée avec le moteur Unity qui est plus connu pour son utilité dans le domaine du jeux vidéo.
+               Il a été utilisé ici pour la simplicité du déploiement sous android. Le système UI du moteur étant aussi assez intuitif, 
+               Unity a grandement facilité le développement de l'application. La logique de l'application est donc codée avec le language C#.
+            </div>
+        </div>
+    </div>
+    <div class="gallery">
+        <div class="controls">
+            <a href="noisevisualizer.html" class="previous">
+                <span class="arrow">&larr;</span>
+                <span>Précédent</span>
+            </a>
+            <a href="boids.html" class="next">
+                <span>Suivant</span>
+                <span class="arrow">&rarr;</span>
+            </a>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <img id="modal-img" src="">
+        </div>
+      
+      </div>
+
+</body>
+<script src="menu.js"></script>
+<script src="js/modal.js"></script>
+</html>

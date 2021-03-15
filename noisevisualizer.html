@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Baptiste Odet</title>
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="modal.css">
+    <meta name="viewport" content="width=750">
+</head>
+<body>
+    <div class="panel"></div>
+    <a href="index.html" id="myname">Baptiste Odet</a>
+    <div class="sidebar">
+        <a class="menu-btn">
+            <div class="hamburger">
+                <div></div>                    
+                <div></div>                    
+                <div></div>                    
+            </div>
+            <span>MENU</span>
+        </a>
+        <div class="menu-content">
+            <div class="container">
+                <a href="index.html" class="menu-item">
+                    <div style="background: rgb(191, 255, 205);"></div>
+                    <span>Accueil</span>
+                </a>
+                <a href="projects.html" class="menu-item">
+                    <div style="background: rgb(255, 191, 191);"></div>
+                    <span>Projets</span>
+                </a>
+                <a href="contact.html" class="menu-item">
+                    <div style="background: rgb(255, 191, 250);"></div>
+                    <span>Contact</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="background">
+        <span>PROJECTS</span>
+        <span>PROJECTS</span>
+    </div>
+
+    <div id="main">
+        <div class="container">
+            <div class="controls">
+                <a href="protomuss.html" class="previous">
+                    <span class="arrow">&larr;</span>
+                    <span>Précédent</span>
+                </a>
+                <a href="workouttimer.html" class="next">
+                    <span>Suivant</span>
+                    <span class="arrow">&rarr;</span>
+                </a>
+            </div>
+            <video controls>
+                <source src="data/NoiseVisualizer_overview.mp4"
+                        type="video/mp4">
+            
+                Sorry, your browser doesn't support embedded videos.
+            </video>
+            <div class="header">
+                <div class="name">
+                    <h1>NoiseVisualizer</h1>
+                </div>
+                <span class="desc">Logiciel de visualisation en temps réel du bruit de Perlin.</span>
+                <div class="separator"></div>
+                <div class="global-infos">
+                    <div class="global-infos-item">
+                        <span>Type</span>
+                        <span>Logiciel</span>
+                    </div>
+                    <div class="global-infos-item">
+                        <span>Date</span>
+                        <span>2020</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section center">
+            <div class="title">
+                <span>Description</span>
+            </div>
+            <div class="text">
+                L'idée derrière ce projet est de pouvoir visualiser en temps réel l'influence des paramètres régissant le célèbre algorithme de Perlin. 
+                Pour cela, les paramètres de l'algorithme sont modifiables avec les boutons et sliders et on obtient 
+                en sortie un graphe, une texture, ou un terrain générés en fonctions des paramètres de l'algorithme.
+                Le but est de pouvoir comprendre comment les différents paramètres influencent le bruit. </br> </br>
+                
+                Le logiciel simule le bruit de Perlin selon 4 paramètres :
+                <ul>
+                    <li>La <b>graine</b> (seed) du générateur de nombre pseudo-aléatoire.</li>
+                    <li>Le nombre d'<b>octave</b> qui correspond au nombre de bruit généré (ces bruits sont ensuite superposés pour donner un seul bruit).</li>
+                    <li>La <b>persistence</b> , facteur qui correspond à l'influence de chaque octave sur le bruit final.</li>
+                    <li>La <b>fréquence</b> qui se traduit par un zoom.</li>
+                </ul>
+                Il est possible de visualiser le bruit avec différentes dimensions : 
+                <ul>
+                    <li><b>Graphe 1D</b></li>
+                    <li><b>Texture 2D</b> : sauvegarde en fichier image (.png) possible.</li>
+                    <li><b>Terrain</b> : le bruit est calculé en deux dimensions mais est visualisé en 3D. Sauvegarde en fichier object (.obj) possible.</li>
+                </ul>
+
+                Deux thèmes visuels sont disponibles pour l'application : clair ou foncé.
+            </div>
+
+            <div class="title">
+                <span>Comment ?</span>
+            </div>
+            <div class="text">
+                Ce projet est réalisé en C++ qui est langage permettant une flexibilité et une rapidité au niveau de l'algorithme.
+                L'affichage est fait grâce à OpenGl et toute la partie interface fonctionne grâce à <a href="https://github.com/ocornut/imgui">dear-imgui</a>.
+                </br>
+                Le bruit est calculé dans un thread secondaire afin d'avoir une fluidité dans l'exécution du programme et de pouvoir visualiser en temps réel les modifications
+                apportées aux paramètres de l'algorithme.
+                </br>
+                Le widget permettant la modification des couleurs (n'existant pas dans la librairie dear-imgui) a été implémenté spécialement pour ce 
+                projet. Il permet un ajout ou suppression de couleurs ainsi que la possibilité de modifier l'influence de chaque couleur indépendamment.  
+            </div>
+        </div>
+    </div>
+    <div class="gallery">
+        <div class="title">
+            <span>Galerie</span>
+        </div>
+        <div class="container">
+            <div class="modal-trigger">
+                <img src="data/NoiseVisualizer_graph1.PNG"/>
+            </div> 
+            <div class="modal-trigger">
+                <img src="data/NoiseVisualizer_graph2.PNG"/>
+            </div> 
+            <div class="modal-trigger">
+                <img src="data/NoiseVisualizer_setupandtexture.png"/>
+            </div> 
+            <div class="modal-trigger">
+                <img src="data/NoiseVisualizer_texture_color1.gif"/>
+            </div> 
+            <div class="modal-trigger">
+                <img src="data/NoiseVisualizer_texture_color2.gif"/>
+            </div> 
+            <div class="modal-trigger">
+                <img src="data/NoiseVisualizer_terrain1.PNG"/>
+            </div> 
+        </div>
+        <div class="controls">
+            <a href="protomuss.html" class="previous">
+                <span class="arrow">&larr;</span>
+                <span>Précédent</span>
+            </a>
+            <a href="workouttimer.html" class="next">
+                <span>Suivant</span>
+                <span class="arrow">&rarr;</span>
+            </a>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <img id="modal-img" src="">
+        </div>
+      
+      </div>
+
+</body>
+<script src="menu.js"></script>
+<script src="js/modal.js"></script>
+</html>

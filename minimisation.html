@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Baptiste Odet</title>
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="modal.css">
+    <meta name="viewport" content="width=750">
+</head>
+<body>
+    <div class="panel"></div>
+    <a href="index.html" id="myname">Baptiste Odet</a>
+    <div class="sidebar">
+        <a class="menu-btn">
+            <div class="hamburger">
+                <div></div>                    
+                <div></div>                    
+                <div></div>                    
+            </div>
+            <span>MENU</span>
+        </a>
+        <div class="menu-content">
+            <div class="container">
+                <a href="index.html" class="menu-item">
+                    <div style="background: rgb(191, 255, 205);"></div>
+                    <span>Accueil</span>
+                </a>
+                <a href="projects.html" class="menu-item">
+                    <div style="background: rgb(255, 191, 191);"></div>
+                    <span>Projets</span>
+                </a>
+                <a href="contact.html" class="menu-item">
+                    <div style="background: rgb(255, 191, 250);"></div>
+                    <span>Contact</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="background">
+        <span>PROJECTS</span>
+        <span>PROJECTS</span>
+    </div>
+
+    <div id="main">
+        <div class="container">
+            <div class="controls">
+                <a href="dice.html" class="previous">
+                    <span class="arrow">&larr;</span>
+                    <span>Précédent</span>
+                </a>
+                <a href="protomuss.html" class="next">
+                    <span>Suivant</span>
+                    <span class="arrow">&rarr;</span>
+                </a>
+            </div>
+            <img class="headimg" src="data/thumbnail-minimisation.PNG">
+            <div class="header">
+                <div class="name">
+                    <h1>Minimisation</h1>
+                </div>
+                <span class="desc">Minimisation du temps de parcours d'un ensemble de points par différentes méthodes numériques.</span>
+                <div class="separator"></div>
+                <div class="global-infos">
+                    <div class="global-infos-item">
+                        <span>Type</span>
+                        <span>Simulation</span>
+                    </div>
+                    <div class="global-infos-item">
+                        <span>Date</span>
+                        <span>2020</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section center">
+            <div class="title">
+                <span>Description</span>
+            </div>
+            <div class="text">
+                Lors de l'étude des différentes méthodes numériques de simulation physique, l'université m'a permis de réaliser ce projet concernant la minimisation. Le but, minimiser 
+                le temps de parcours d'un voyageur. Pour cela, trois algorithmes ont été testé, certains avec succès d'autres sans. 
+                <ul>
+                    <li>Méthode naïve : parcours séquentiel des possibilités jusqu'à trouver un chemin assez court. Un critère de distance arrête le calcul.</li>
+                    <li>Méthode du recuit simulé : on simule le refroidissement thermique physique d'un système. Dans le monde physique, lors d'un refroidissement assez 
+                        lent d'un système, il tend à se rapprocher d'un état d'énergie minimum. Le principe ici est le même avec un état excité du système correspondant
+                        à une recherche très vaste des chemins possibles puis au cours du temps la recherche s'affine jusqu'à atteindre un minimum. </li>
+                    <li>Méthode génétique : se base sur la sélection et les mutations génétiques. Au cours des générations de populations (les chemins), des croisements et des mutations correspondant
+                        à des modifications de certains chemins permettent d'atteindre un minimum au bout d'un certain nombre de génération.
+                    </li>
+                </ul>
+                </br> </br>
+                Le projet à été réalisé entièrement en C++ avec l'aide de la librairie de calcul scientifique du cern : ROOT qui permet l'intégration de mathématiques poussés au language 
+                de base et l'affichage de graphiques en temps réel.
+
+                <div class="modal-trigger">
+                    <img src="data/minimisation1.PNG"/>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div class="gallery">
+        <div class="controls">
+            <a href="dice.html" class="previous">
+                <span class="arrow">&larr;</span>
+                <span>Précédent</span>
+            </a>
+            <a href="protomuss.html" class="next">
+                <span>Suivant</span>
+                <span class="arrow">&rarr;</span>
+            </a>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <img id="modal-img" src="">
+        </div>
+      
+      </div>
+
+</body>
+<script src="menu.js"></script>
+<script src="js/modal.js"></script>
+</html>

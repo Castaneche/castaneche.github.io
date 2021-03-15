@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Baptiste Odet</title>
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="modal.css">
+    <meta name="viewport" content="width=750">
+</head>
+<body>
+    <div class="panel"></div>
+    <a href="index.html" id="myname">Baptiste Odet</a>
+    <div class="sidebar">
+        <a class="menu-btn">
+            <div class="hamburger">
+                <div></div>                    
+                <div></div>                    
+                <div></div>                    
+            </div>
+            <span>MENU</span>
+        </a>
+        <div class="menu-content">
+            <div class="container">
+                <a href="index.html" class="menu-item">
+                    <div style="background: rgb(191, 255, 205);"></div>
+                    <span>Accueil</span>
+                </a>
+                <a href="projects.html" class="menu-item">
+                    <div style="background: rgb(255, 191, 191);"></div>
+                    <span>Projets</span>
+                </a>
+                <a href="contact.html" class="menu-item">
+                    <div style="background: rgb(255, 191, 250);"></div>
+                    <span>Contact</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="background">
+        <span>PROJECTS</span>
+        <span>PROJECTS</span>
+    </div>
+
+    <div id="main">
+        <div class="container">
+            <div class="controls">
+                <a href="minimisation.html" class="previous">
+                    <span class="arrow">&larr;</span>
+                    <span>Précédent</span>
+                </a>
+                <a href="noisevisualizer.html" class="next">
+                    <span>Suivant</span>
+                    <span class="arrow">&rarr;</span>
+                </a>
+            </div>
+            <video controls>
+                <source src="data/ProTomuss_overview.mp4"
+                        type="video/mp4">
+            
+                Sorry, your browser doesn't support embedded videos.
+            </video>
+            <div class="header">
+                <div class="name">
+                    <h1>ProTomuss</h1>
+                </div>
+                <span class="desc">Application de bureau pour consulter les notes de l'Université Lyon 1</span>
+                <div class="separator"></div>
+                <div class="global-infos">
+                    <div class="global-infos-item">
+                        <span>Type</span>
+                        <span>Logiciel</span>
+                    </div>
+                    <div class="global-infos-item">
+                        <span>Date</span>
+                        <span>2020</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section center">
+            <div class="title">
+                <span>Pourquoi ?</span>
+            </div>
+            <div class="text">
+                L'idée derrière ce projet est de repenser entièrement l'interface du site de notes universitaires. L'interface officielle étant mal organisée 
+                et peu interactive, le but a été de se rapprocher d'une interface comme <a href="https://www.index-education.com/fr/logiciel-gestion-vie-scolaire.php">pronote</a>. Pour ne pas simplement appliquer un thème au site
+                officiel et avoir une certaine valeur ajoutée au projet, j'ai décidé de créer une application de bureau qui permet donc de s'affranchir 
+                du navigateur internet.
+                <div class="modal-trigger">
+                    <img src="data/tomussvsprotomuss.PNG">
+                </div>
+
+                L'application organise les notes par matières et les matières par semestre afin de se rapprocher d'une interface comme pronote. Les informations 
+                par matières sont aussi triées de facon à séparer les notes, des informations telles que le groupe de travaux pratiques, les dates d'examens etc... ce qui 
+                n'est pas le cas sur le site officiel. </br></br>
+
+                Fonctionalités de l'application :
+                <ul>
+                    <li>Connexion par identifiant de l'univ-lyon1</li>
+                    <li>Semestres</li>
+                    <li>Matières (UE)</li>
+                    <li>Notes (avec statistiques sur la promo)</li>
+                    <li>Contact des différents responsables/professeurs d'UE</li>
+                </ul>
+            </div>
+
+            <div class="title">
+                <span>Comment ?</span>
+            </div>
+            <div class="text">
+                Le projet est construit avec electron, qui permet d'utiliser les connaissances des langages web 
+                pour développer une application de bureau portable. Le but du projet étant de réaliser une intégration HTML/CSS/JS avec des données variées.
+                Ces données sont récupérées sur le site officiel de l'univ-lyon1 avec les identifiants que l'utilisateur fournit 
+                sur la page de connexion. L'application est entièrement responsive.
+                <ul>
+                    <li><b>Back</b> : Python/NodeJS <br>
+                        Script python qui permet la connexion au site de l'université par requête http. Les données sont alors
+                        triées et récupérées au format JSON et stockées dans un fichier pour pouvoir ensuite être affichées.</li>
+                    <li><b>Front</b> : HTML/CSS/JS <br>
+                        Traitement des données et séparation des matières par semestres, des notes par matières etc... Affichage des notes et matières 
+                        selon le semestre selectionné. </li>
+                </ul>
+            </div>
+
+            <div class="title">
+                <span>Problèmes et Limites</span>
+            </div>
+            <div class="text">
+                Le site sur lequel l'application est basé ne dépendant pas de moi et étant mis à jour régulièrement, 
+                toutes les fonctionnalités existantes sur le site de l'université ne sont pas implémentées dans ce projet. Le problème majeur 
+                rencontré sur l'application est le fait que le site officiel bloque les connexions répetitives et restreint par conséquent la mise à jour des données
+                de l'application. </br>
+                Suite au développement
+                des cours à distance, le site officiel sur lequel est basé ce projet à beaucoup évolué avec de nouvelles fonctionnalités qui 
+                interagissent directement avec les serveurs de l'université. Il est donc impossible pour moi d'implémenter ces fonctionnalités 
+                dans l'application car je n'ai pas accès aux serveurs universitaires. 
+
+            </div>
+        </div>
+    </div>
+    <div class="gallery">
+        <div class="title">
+            <span>Galerie</span>
+        </div>
+        <div class="container">
+            <div class="modal-trigger">
+                <img src="data/proTomuss_flou_final.gif"/>
+            </div> 
+        </div>
+        <div class="controls">
+            <a href="minimisation.html" class="previous">
+                <span class="arrow">&larr;</span>
+                <span>Précédent</span>
+            </a>
+            <a href="noisevisualizer.html" class="next">
+                <span>Suivant</span>
+                <span class="arrow">&rarr;</span>
+            </a>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <img id="modal-img" src="">
+        </div>
+      
+      </div>
+
+</body>
+<script src="menu.js"></script>
+<script src="js/modal.js"></script>
+</html>
