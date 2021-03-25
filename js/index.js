@@ -95,10 +95,18 @@ function updateInfos(index) {
     goto.href = imgs[index].href;
 }
 function changeImage(index) {
-    let image = document.getElementById('image');
+    let image1 = document.getElementById('image1');
+    let image2 = document.getElementById('image2');
+    let image3 = document.getElementById('image3');
     
+    let images = [image1, image2, image3];
+
     setTimeout(function() {
-        image.src = imgs[index].src;
+        for(let j = 0; j < images.length; j++)
+        {
+            images[j].style.display = 'none';
+        }
+        images[index].style.display = 'block';
     }
     , 300);
 }
