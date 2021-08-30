@@ -1,0 +1,100 @@
+
+.project-header {
+    position: sticky;
+    top : 0px;
+    display: flex;
+    background: white;
+    padding: 20px 10px;
+    z-index: 10;
+    border-bottom: solid 2px #111;
+}
+
+.project-header h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin : 0;
+    padding-left: 50px;
+    padding-top: 10px;
+}
+.nav-btn {
+    display: flex;
+    margin-left: auto;
+}
+.nav-btn .btn {
+    margin: 0 10px;
+}
+
+
+
+
+#main {
+    margin: 0 40px;
+    padding-top : 20px;
+}
+
+#head-img {
+    width: 100%;
+    height: 200px;
+    border: solid 2px black;
+    border-radius: 2px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.head-section {
+    display: flex;
+    margin: 20px 0;
+}
+.head-section #purpose { 
+    width: 60%;
+}
+.head-section .side {
+    width: 40%;
+}
+.head-section #purpose, .head-section .side {
+    margin: 20px;
+}
+
+#purpose, #duration, #role {
+    position: relative;
+}
+
+p {
+    margin: 0px 10px;
+    padding: 20px;
+    border: solid 2px lightgray;
+    border-radius: 2px;
+    font-size: 1.2rem;
+}
+.zone-title {
+    z-index: 1;
+    position: relative;
+    height: 45px;
+}
+.zone-title .stylized {
+    position: absolute;
+    top : 0px;
+    left: 0px
+}
+.section {
+    display: flex;
+    align-items: center;
+    margin: 60px 0;
+}
+.section > div {
+    width: calc(50% - 10px);
+    margin: 20px;
+}
+.section .side-img {
+    position: relative;
+    height: 100%;
+}
+.section img {
+    width: 100%;
+    object-fit: cover;
+    border: 2px solid #111;
+}
+
+#final {
+    width: 100%;
+}
