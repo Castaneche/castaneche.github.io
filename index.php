@@ -139,18 +139,7 @@
             <?php include('footer.php'); ?>
         </div>
     </body>
-    <script>
-        window.transitionToPage = function(href) {
-            document.querySelector('body').style.opacity = 0
-            setTimeout(function() { 
-                window.location.href = href
-            }, 500)
-        }
-
-        window.onpageshow = function() {
-            document.querySelector('body').style.opacity = 1
-        }
-    </script>
+    <script src="js/script.js"></script>
 </html>
 
     

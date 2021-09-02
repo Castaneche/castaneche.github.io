@@ -14,7 +14,7 @@ body {
     color: black;
     font-size: 17px;
     opacity: 0;
-    transition: opacity .5s;
+    transition: opacity .2s;
 }
 
 a {
