@@ -13,24 +13,8 @@
         <link href="https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&display=swap" rel="stylesheet"> 
     </head>
     <body>
-        <div id="top">
-            <a href="index.html" id="title">
-                <h1>Baptiste Odet</h1>
-                <div class="separator"></div>
-            </a>
-            <div class="right">
-                <div class="countries">
-                    <a href="">FR</a>
-                    <a href="" id="selected-country">EN</a>
-                </div>
-                <a href="" class="menu-btn">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </a>
-                <div class="separator"></div>
-            </div>
-        </div>
+        <?php include('header.php'); ?>
+
         <div id="main">
             <div id="welcome">
                 <div class="background"></div>
@@ -61,7 +45,7 @@
                     <div class="name">Noise Visualizer</div>
                     <div class="desc">Data analysis software. Draw curves and do realtime analysis on graphs : fourier, fitting and more...</div>
                     <div class="languages">C++, OpenGl, ImGui</div>
-                    <div onclick="transitionToPage('pages/noisevisualizer.html')" class="btn">
+                    <div onclick="transitionToPage('noisevisualizer')" class="btn">
                         <div class="background"></div>
                         <div class="shadow"></div>
                         <span>View Project -></span>
@@ -76,7 +60,7 @@
                     <div class="name">ProTomuss</div>
                     <div class="desc">Data analysis software. Draw curves and do realtime analysis on graphs : fourier, fitting and more...</div>
                     <div class="languages">C++, OpenGl, ImGui</div>
-                    <div onclick="transitionToPage('pages/protomuss.html')" class="btn">
+                    <div onclick="transitionToPage('protomuss')" class="btn">
                         <div class="background"></div>
                         <div class="shadow"></div>
                         <span>View Project -></span>
@@ -89,7 +73,7 @@
             <div class="header"><h2>-> About Me</h2></div>
             <div class="about">
                 <div class="left">
-                    <img class="face" src="data/face.png">
+                    <img class="face" src="data/face.jpg">
                     <div class="name">Baptiste Odet</div>
                     <div class="desc">Physics student and programmer</div>
                     <div class="socials">
@@ -111,9 +95,7 @@
                     </p>
                 </div>
             </div>
-            <footer>
-                <span class="copyright">©Copyright - 2021 - Odet Baptiste</span>
-            </footer>
+            <?php include('footer.php'); ?>
         </div>
     </body>
     <script>
@@ -124,9 +106,9 @@
             }, 500)
         }
 
-        document.addEventListener('DOMContentLoaded', function(event) {
+        window.onpageshow = function() {
             document.querySelector('body').style.opacity = 1
-        })
+        }
     </script>
 </html>
 

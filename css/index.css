@@ -122,6 +122,7 @@
 .about .left .face {
     width: 50%;
     margin-bottom: 20px;
+    clip-path: circle(50% at 50% 50%);
 }
 
 .about .left span {

@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>Baptiste Odet</title>
-        <link rel="stylesheet" href="../css/global.css">
-        <link rel="stylesheet" href="../css/pages.css">
+        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/pages.css">
         <meta name="viewport" content="width=600">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +14,7 @@
     </head>
     <body>
         <div class="project-header">
-            <div onclick="transitionToPage('../index.html')" class="btn">
+            <div onclick="transitionToPage('/')" class="btn">
                 <div class="background"></div>
                 <div class="shadow"></div>
                 <span><- Back</span>
@@ -23,12 +23,12 @@
             <h1>NoiseVisualizer</h1>
 
             <div class="nav-btn">
-                <div onclick="transitionToPage('../fga.html')" class="btn">
+                <div onclick="transitionToPage('www.fga-software.xyz')" class="btn">
                     <div class="background"></div>
                     <div class="shadow"></div>
                     <span><-</span>
                 </div>
-                <div onclick="transitionToPage('../.html')" class="btn">
+                <div onclick="transitionToPage('protomuss')" class="btn">
                     <div class="background"></div>
                     <div class="shadow"></div>
                     <span>-></span>
@@ -36,7 +36,7 @@
             </div>
         </div>
         <div id="main">
-            <img id="head-img" src="../data/thumbnail-noisevisualizer.PNG">
+            <img id="head-img" src="data/thumbnail-noisevisualizer.PNG">
             <div class="head-section">
                 <div id="purpose">
                     <div class="zone-title">
@@ -67,12 +67,12 @@
                     <p>Le but était donc de construire une application permettant la visualisation en temps réel des différents paramètres de l’algorithme Perlin. Cette visualisation s’effectue en 1D (graph), 2D (texture), 3D (terrain). Les textures générées peuvent être exportées en format images ainsi que les terrains en format objet.</p>
                 </div>
                 <div class="side-img">
-                    <img src="../data/NoiseVisualizer_graph1.PNG">
+                    <img src="data/NoiseVisualizer_graph1.PNG">
                 </div>
             </div>
             <div class="section">
                 <div class="side-img">
-                    <img src="../data/NoiseVisualizer_terrain1.PNG">
+                    <img src="data/NoiseVisualizer_terrain1.PNG">
                 </div>
                 <div id="approach">
                     <div class="zone-title">
@@ -88,9 +88,9 @@
                 </div>
                 <p>La partie graphique est réalisée avec ImGui et OpenGl. Toute l’application est codée en C++. L’algorithme de Perlin à été implémenté de zéro ce qui a permis de choisir les paramètres à intégrer. Pour une visualisation en temps réel, il a fallu utiliser des threads car pour de grandes résolutions de texture ou de terrain l’algorithme nécessite un certain temps de calcul. </p>
             </div>
-            <footer>
-                <span class="copyright">©Copyright - 2021 - Odet Baptiste</span>
-            </footer>
+
+
+            <?php include('../footer.php'); ?>
         </div>
     </body>
     <script>
@@ -101,9 +101,9 @@
             }, 500)
         }
 
-        document.addEventListener('DOMContentLoaded', function(event) {
+        window.onpageshow = function() { 
             document.querySelector('body').style.opacity = 1
-        })
+        }
     </script>
 </html>
 
