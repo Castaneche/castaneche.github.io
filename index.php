@@ -28,12 +28,12 @@
                 </div>
                 <div class="infos">
                     <div class="name">FGA - Fast Graphing & Analysis Software</div>
-                    <div class="desc">Data analysis software. Draw curves and do realtime analysis on graphs : fourier, fitting and more...</div>
+                    <div class="desc">Data analysis software. Draw curves and do realtime analysis : fourier, fitting and more...</div>
                     <div class="languages">C++, OpenGl, ImGui</div>
-                    <div onclick="transitionToPage('www.fga-software.com')" class="btn">
+                    <div onclick="transitionToPage('www.fga-software.com')" class="btn website-btn">
                         <div class="background"></div>
                         <div class="shadow"></div>
-                        <span>View Project -></span>
+                        <span>View Website -></span>
                     </div>
                 </div>
             </div>
@@ -43,7 +43,7 @@
                 </div>
                 <div class="infos">
                     <div class="name">Noise Visualizer</div>
-                    <div class="desc">Data analysis software. Draw curves and do realtime analysis on graphs : fourier, fitting and more...</div>
+                    <div class="desc">Perlin noise realtime visualization in one, two, or three dimensions.</div>
                     <div class="languages">C++, OpenGl, ImGui</div>
                     <div onclick="transitionToPage('noisevisualizer')" class="btn">
                         <div class="background"></div>
@@ -53,13 +53,11 @@
                 </div>
             </div>
             <div class="card">
-                <div class="thumbnail">
-                    <img src="data/thumbnail-protomuss.PNG">
-                </div>
+                <img src="data/thumbnail-ProTomuss.PNG">
                 <div class="infos">
                     <div class="name">ProTomuss</div>
-                    <div class="desc">Data analysis software. Draw curves and do realtime analysis on graphs : fourier, fitting and more...</div>
-                    <div class="languages">C++, OpenGl, ImGui</div>
+                    <div class="desc">Desktop application to consult university's grades.</div>
+                    <div class="languages">HTML, CSS, Javascript, Electron</div>
                     <div onclick="transitionToPage('protomuss')" class="btn">
                         <div class="background"></div>
                         <div class="shadow"></div>
@@ -67,8 +65,51 @@
                     </div>
                 </div>
             </div>
-
-            <a href="" class="see-more">see more</a>
+            <div class="card">
+                <div class="thumbnail">
+                    <img src="data/thumbnail-dice.PNG">
+                </div>
+                <div class="infos">
+                    <div class="name">Dice Detection</div>
+                    <div class="desc">Realtime dice detection with a smartphone's camera.</div>
+                    <div class="languages">Python, OpenCV</div>
+                    <div onclick="transitionToPage('dice')" class="btn">
+                        <div class="background"></div>
+                        <div class="shadow"></div>
+                        <span>View Project -></span>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="thumbnail">
+                    <img src="data/thumbnail-minimisation.PNG">
+                </div>
+                <div class="infos">
+                    <div class="name">Minimisation</div>
+                    <div class="desc">Various minimisation algorithms to solve the travelling salesman problem</div>
+                    <div class="languages">C++, ROOT</div>
+                    <div onclick="transitionToPage('minimisation')" class="btn">
+                        <div class="background"></div>
+                        <div class="shadow"></div>
+                        <span>View Project -></span>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="thumbnail">
+                    <img src="data/thumbnail-workouttimer.PNG">
+                </div>
+                <div class="infos">
+                    <div class="name">WorkoutTimer</div>
+                    <div class="desc">Simple android app to configure timers for sport's sessions.</div>
+                    <div class="languages">C++, OpenGl, ImGui</div>
+                    <div onclick="transitionToPage('workouttimer')" class="btn">
+                        <div class="background"></div>
+                        <div class="shadow"></div>
+                        <span>View Project -></span>
+                    </div>
+                </div>
+            </div>
 
             <div class="header"><h2>-> About Me</h2></div>
             <div class="about">
