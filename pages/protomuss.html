@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Baptiste Odet</title>
+        <link rel="stylesheet" href="../css/global.css">
+        <link rel="stylesheet" href="../css/pages.css">
+        <meta name="viewport" content="width=600">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="#welcome">Home</a></li>
+                <li><a href="#mywork">My Work</a></li>
+                <li><a href="#aboutme">About Me</a></li>
+            </ul>
+            <div class="nav-arrows">
+                <a href=""><- Previous</a>                
+                <a href="">Next -></a>                
+            </div>
+
+            <div class="burger">
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+        <div class="head">
+            <div class="left">
+                <h1>ProTomuss - College's grades</h1>
+                <span>Project #4</span>
+                <div class="techs">
+                    <img src="../data/icons/html_64x64.png">
+                    <img src="../data/icons/css_64x64.png">
+                    <img src="../data/icons/javascript_64x64.png">
+                    <img src="../data/icons/nodejs_64x64.png">
+                    <img src="../data/icons/python_64x64.png">
+                </div>
+            </div>
+            <div class="right">
+                <div class="block">
+                    <h2>Duration</h2>
+                    <p>L’apprentissage de Electron et le développement de l’application a duré environ 2 mois.</p>
+                </div>
+                <div class="block">
+                    <h2>My Role</h2>
+                    <p>J’ai travaillé seul sur ce projet. Mes camarades étudiants m’ont permis de pouvoir tester l’application sur les différents comptes et formations de l’université.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="two-columns-35percent">
+            <div class="block">
+                <h2>Purpose of the project</h2>
+                <p>Le but de ce projet est de pouvoir accéder au notes universitaires sur une interface graphique attirante et directement depuis le bureau windows. Les notes, affichées brutes sur le site officiel, sont ici affichées et classées par matières ainsi que les informations sur les responsables de cours, les groupes de classe ou encore les travaux pratiques. L’application est inspiré de l’application de référence pour les collèges/lycées : pronote.</p>
+            </div>
+            <video controls>
+                <source src="../data/ProTomuss_overview.mp4"
+                        type="video/mp4">
+                Sorry, your browser doesn't support embedded videos.
+            </video>
+        </div>
+
+        <div class="two-columns">
+            <div class="block">
+                <h2>Approach</h2>
+                <ul>
+                    <li>Le projet étant accentué sur l’amélioration du design du site officiel l’application est codée avec les languages du Web : HTML, CSS, Javascript avec l’environnement Electron ce qui a permis d’arriver à un résultat satisfaisant très rapidement et simplement.</li>
+                    <li>La partie backend de l’application est réalisée en Python. Un script lancé lors de la connection permet par scraping de récupérer les données nécéssaires sur le site officiel de l’Université.</li>
+                </ul>
+            </div>
+            <div class="block">
+                <h2>Challenges</h2>
+                <ul>
+                    <li>Le site de L’université ne disposant pas d’API, il a fallu effectuer les actions d’un utilisateur lambda avec un script python (rentrer les identifiants, récupérér les données affichées sur le site). De nombreux problèmes ont été rencontrés pour faire fonctionner ce script. </li>
+                    <li>Par soucis de rapidité, l’outil sélénium n’a pas été utilisé. Les requètes http via script étant mal supportées par le site il a fallu user de patience afin de pouvoir arriver a une résultat convaincant et fonctionnel.</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+    
+    
+    <script>
+        window.transitionToPage = function(href) {
+            document.querySelector('body').style.opacity = 0
+            setTimeout(function() { 
+                window.location.href = href
+            }, 500)
+        }
+
+        document.addEventListener('DOMContentLoaded', function(event) {
+            document.querySelector('body').style.opacity = 1
+        })
+    </script>
+</html>
+
+    

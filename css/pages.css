@@ -1,100 +1,201 @@
+body {
+    width: 95%;
+    margin: auto;
+    max-width: 1400px;
+    font-size: 24px;
+    padding-top: 100px
+}
 
-.project-header {
-    position: sticky;
-    top : 0px;
+nav {
     display: flex;
-    background: white;
-    padding: 20px 10px;
-    z-index: 10;
-    border-bottom: solid 2px #111;
-}
-
-.project-header h1 {
-    font-size: 2rem;
-    font-weight: 400;
-    margin : 0;
-    padding-left: 50px;
-    padding-top: 10px;
-}
-.nav-btn {
-    display: flex;
-    margin-left: auto;
-}
-.nav-btn .btn {
-    margin: 0 10px;
-}
-
-
-
-
-#main {
-    margin: 0 40px;
-    padding-top : 20px;
-}
-
-#head-img {
     width: 100%;
-    height: 250px;
-    border: solid 2px black;
-    border-radius: 2px;
-    object-fit: cover;
-    object-position: top;
+    border-bottom: 1px solid gray;
+    margin-bottom: 100px;
 }
-
-.head-section {
+.nav-arrows {
+    font-family: 'Inter';
+    font-size: 18px;
+    margin: 24px 0 24px auto;
+}
+nav ul {
     display: flex;
-    margin: 20px 0;
+    padding: 0;
 }
-.head-section #purpose { 
-    width: 60%;
+nav ul li {
+    font-size: 18px;
+    margin-right: 60px;
 }
-.head-section .side {
-    width: 40%;
+nav a {
+    padding: 10px 15px;
+    border-radius: 20px;
 }
-.head-section #purpose, .head-section .side {
-    margin: 20px;
+nav a:hover {
+    background-color: #eeeeee;
+}
+nav .active {
+    background-color: #eeeeee;
 }
 
-#purpose, #duration, #role {
-    position: relative;
+.head {
+    display: flex;
+    
 }
-
-p {
-    margin: 0px 10px;
+.head .left {
+    width: calc(50% - 20px);
+    margin-right: 20px;
+    border: 4px solid #eeeeee;
     padding: 20px;
-    border: solid 2px lightgray;
-    border-radius: 2px;
-    font-size: 1.2rem;
 }
-.zone-title {
-    z-index: 1;
-    position: relative;
-    height: 45px;
+.head .right {
+    width: 50%;
 }
-.zone-title .stylized {
-    position: absolute;
-    top : 0px;
-    left: 0px
-}
-.section {
-    display: flex;
-    align-items: center;
-    margin: 60px 0;
-}
-.section > div {
-    width: calc(50% - 10px);
-    margin: 20px;
-}
-.section .side-img {
-    position: relative;
-    height: 100%;
-}
-.section img {
-    width: 100%;
-    object-fit: cover;
-    border: 2px solid #111;
+.head .left h1 {
+    font-size: 72px;
+    margin: 0;
+
 }
 
-#final {
-    width: 100%;
+.head .left span {
+    margin-left: 70px;
+    position: relative;
+    padding: 0;
+    font-size: 24px;
+    font-weight: 200;
+}
+.head .left span::before {
+    display: inline-block;
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: black;
+    position: absolute;
+    bottom: calc(50% - 2px);
+    left: -70px;
+}  
+
+.head .techs {
+    margin-top: 20px;
+    display: flex;
+}
+.head .techs img {
+    width: 64px;
+    margin-right: 20px;
+}
+
+.block {
+    margin: 10px 10px;
+}
+.block h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.block h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: black;
+}
+
+.two-columns-35percent {
+    display: flex;
+    margin-top: 50px;
+}
+.two-columns-35percent .block {
+    width: 35%;
+}
+.two-columns-35percent video,
+.two-columns-35percent img {
+    width: calc(65% - 20px);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.two-columns {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.two-columns > * {
+    width: calc(50% - 20px);
+}
+
+.two-columns img {
+    margin: 10px;
+}
+
+
+.block ul {
+    list-style: disc;
+    font-weight: 300;;
+}
+
+
+@media (max-width: 900px) {
+    body {
+        padding-top: 20px;
+    }
+    nav {
+        margin-bottom: 20px;
+    }
+    nav ul {
+        display: none;
+    }
+    nav .nav-arrows {
+        margin-left: 0;
+        font-size: 24px;
+    }
+    nav .burger {
+        cursor: pointer;
+        padding: 0 10px;
+        border-radius: 10px;
+        margin: 24px 0 24px auto;
+        width: 50px;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    nav .burger div {
+        width: 100%;
+        height: 3px;
+        background: black;
+    }
+    nav .burger:hover {
+        background: #eeeeee;
+    }
+
+    .head {
+        display: block;
+    }
+    .head .left, .head .right {
+        width: calc(100% - 60px);
+    }
+    .two-columns {
+        display: block;
+    }
+    .two-columns > * {
+        width: 100%;
+    }
+    .reverse {
+        display: flex!important;
+        flex-direction: column-reverse;
+    }
+    .two-columns-35percent {
+        display: block;
+    }
+    .two-columns-35percent .block, 
+    .two-columns-35percent video,
+    .two-columns-35percent img {
+        width: 100%;
+        margin: 0;
+    }
+    .block {
+        margin: 40px 0;
+    }
+    .block img,
+    .two-columns img, 
+    .two-columns-35percent img {
+        margin: 0!important;
+    }
 }

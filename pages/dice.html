@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Baptiste Odet</title>
+        <link rel="stylesheet" href="../css/global.css">
+        <link rel="stylesheet" href="../css/pages.css">
+        <meta name="viewport" content="width=600">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="#welcome">Home</a></li>
+                <li><a href="#mywork">My Work</a></li>
+                <li><a href="#aboutme">About Me</a></li>
+            </ul>
+            <div class="nav-arrows">
+                <a href=""><- Previous</a>                
+                <a href="">Next -></a>                
+            </div>
+
+            <div class="burger">
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+        <div class="head">
+            <div class="left">
+                <h1>Realtime Dice Detection</h1>
+                <span>Project #3</span>
+                <div class="techs">
+                    <img src="../data/icons/python_64x64.png">
+                </div>
+            </div>
+            <div class="right">
+                <div class="block">
+                    <h2>Duration</h2>
+                    <p>Ce projet a duré 2 semaines et fait partie d’un plus grand projet qui a duré un semestre.</p>
+                </div>
+                <div class="block">
+                    <h2>My Role</h2>
+                    <p>Ce projet fait partie intégrante de mon cursus universitaire c’est pourquoi je l’ai développé en groupe avec un étudiant de ma filière.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="two-columns-35percent">
+            <div class="block">
+                <h2>Purpose of the project</h2>
+                <p>Ce projet fait partie d’un plus grand projet qui visait a développer le jeu 421 sur python et labview. Le jeu ne pouvant se jouer que en ligne de commande en intéragissant avec l’ordinateur nous avons trouvé celà plus intéressant de pouvoir jouer réellement. C’est de cette idée qu’est né ce projet. Il permet, avec une simple caméra (smartphone), de détecter les chiffres affichés sur les face de dés lancés auparavant par le joueur.  </p>
+            </div>
+            <video controls>
+                <source src="../data/Dice_overview.mp4"
+                        type="video/mp4">
+                Sorry, your browser doesn't support embedded videos.
+            </video>
+        </div>
+
+        <div class="two-columns">
+            <div class="block">
+                <h2>Approach</h2>
+                <ul>
+                    <li>Le projet est en fait un script Python utilisant la librairie OpenCV. Le script se connecte à une caméra IP (ici un smartphone connecté sur le réseau local) et récupère le flux vidéo pour l’analyser image par image.</li>
+                    <li>Chaque image est scannée et grâce à OpenCV on peut obtenir les coutours de l’image. Les contours permettent de détecter les points dessinés sur les dés et par dénombrement on obtient en sortie les valeurs associées à chaque dés.</li>
+                </ul>
+            </div>
+            <div class="block">
+                <h2>Challenges</h2>
+                <ul>
+                    <li>La détection des contours sur l’image est quelquechose de très délicat car celà dépend de la luminosité ou encore de l’angle de la caméra par rapport aux dés. C’est pourquoi, ce projet ne fonctionne que dans des conditions biens définies : fond noir, dés avec des points blancs, caméra bien alignée au dessus de la zone de lancer. L’algorithme développé ici ne rivalise en rien avec l’autopilote de la Tesla !</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="two-columns-35percent">
+            <div class="block">
+                <h2>Image processing</h2>
+                <p>On peut voir ici une étape intermédiaire des traitements appliqués à l’image. L’image est dabord passée en noir et blanc. Les points étant blanc, il suffit d’isoler les zones correspondants à des cercles d’un certaines taille. Enfin, les zones détecté sont attribuées à chaque dés par test de distances relative et sont dénombrée pour obtenir les valeurs des dés.</p>
+            </div>
+            <video controls>
+                <source src="../data/Dice1.mp4"
+                        type="video/mp4">
+                Sorry, your browser doesn't support embedded videos.
+            </video>
+        </div>
+    </body>
+    
+    
+    <script>
+        window.transitionToPage = function(href) {
+            document.querySelector('body').style.opacity = 0
+            setTimeout(function() { 
+                window.location.href = href
+            }, 500)
+        }
+
+        document.addEventListener('DOMContentLoaded', function(event) {
+            document.querySelector('body').style.opacity = 1
+        })
+    </script>
+</html>
+
+    
