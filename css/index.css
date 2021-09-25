@@ -1,32 +1,9 @@
 body {
     width: 95%;
     margin: auto;
-    max-width: 1100px;
+    max-width: 1400px;
     font-size: 24px;
-    padding-top: 100px
-}
-nav {
-    width: 100%;
-    border-bottom: 1px solid gray;
-    margin-bottom: 100px;
-}
-nav ul {
-    display: flex;
-    padding: 0;
-}
-nav ul li {
-    font-size: 18px;
-    margin-right: 60px;
-}
-nav a {
-    padding: 10px 15px;
-    border-radius: 20px;
-}
-nav a:hover {
-    background-color: #eeeeee;
-}
-nav .active {
-    background-color: #eeeeee;
+    padding: 50px 0;
 }
 
 .header {
@@ -36,7 +13,7 @@ nav .active {
 .header h1 {
     margin: 0;
     font-size: 64px;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .header span {
@@ -45,6 +22,7 @@ nav .active {
     padding: 0;
     font-size: 36px;
     font-weight: 200;
+    color: #9e9e9e;
 }
 .header span::before {
     display: inline-block;
@@ -57,19 +35,48 @@ nav .active {
     left: -70px;
 }   
 
-
-.section-welcome {
-    margin-bottom: 150px;
+#welcome {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 2px #eeeeee solid;
 }
 
-.section-welcome p {
-    text-align: justify;
-    font-size: 30px;
-    font-weight: 300;
-    width: 60%;
+.content {
+    display: flex;
+}
+.content .block {
+    margin: 0 15px;
+}
+.content .block:nth-child(1) {
+    width: calc(65% - 60px);
 }
 
 
+.content .block:nth-child(2) {
+    width: 35%;
+}
+
+.section-head {
+
+    position: relative;
+}
+.section-head h1 {
+    font-weight: 500;
+}
+.section-head img {
+    width: 42px;
+    float: left;
+    margin-right: 15px;
+}
+.section-head .accent {
+    display: inline-block;
+    width: 150px;
+    height: 5px;
+    background: black;
+    position: absolute;
+    bottom: -10px;
+    border-radius: 10px;
+}
 
 
 
@@ -77,23 +84,33 @@ nav .active {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
+    border: 2px dashed #eeeeee;
 }
 .card {
     cursor: pointer;
-    width: calc(100%/3.0 - 20px);
+    width: calc(100%/2.0 - 20px);
     padding: 10px;
-    transition: background .3s;
+    margin-bottom: 20px;
+    transition: background .3s, scale .2s;
+}
+.card:nth-child(1) {
+    width: 100%;
+}
+
+.card:nth-child(1) img {
+    height: 350px;
 }
 
 .card img {
-    height: 160px;
+    height: 220px;
     width: 100%;
     object-fit: cover;
-    border: 1px solid black;
 }
 .card .underimg {
     font-size: 18px;
+    font-weight: 300;
+    color: #9e9e9e;
     display: flex;
     margin-bottom: 10px;
 }
@@ -103,112 +120,75 @@ nav .active {
 
 .card .title {
     font-weight: 400;
-    background: #a6ffc1;
+    text-decoration: underline;
 }
 
 
 .card:hover {
-    background: #eeeeee;
+    background: #e7e7e7;
+    scale: 1.01;
 }
 
 
 
 .section-aboutme {
-    display: flex;
-}
-.section-aboutme .right {
-    width: 25%;
-}
-.section-aboutme .left {
-    width: calc(70% - 60px);
-    margin-right: 60px;
+    padding: 10px;
+    border: 2px dashed #eeeeee;
 }
 
 .section-aboutme p {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 300;
     text-align: justify;
-    margin-bottom: 40px;
+    margin: 10px 0;
 }
 
-.section-aboutme .right .profil {
+.section-aboutme .profil {
     width: 100%;
+    max-width: 300px;
     filter: contrast(.8) sepia(.2);
     border: 1px solid #9e9e9e;
     border-radius: 2px;
 }
-.section-aboutme .right ul {
-    padding: 0;
+.section-aboutme ul {
+    display: flex;
+    padding: 5px 0;
     margin: 0;
 }
-
-.section-aboutme .right ul a {
-    display: flex;
-    align-items: flex-end;
-    height: 50px;
-}
-
-.section-aboutme .right ul a {
-    font-size: 24px;
-}
-.section-aboutme .right ul img {
+.section-aboutme ul img {
     width: 32px;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
+@media (max-width: 1200px) {
+    
+    .content {
+        flex-direction: column;
+    }
+    .content .block {
+        width: 100% !important;
+        margin: 0;
+    }
 
+    .section-mywork img {
+        border: 0;
+    }
+
+    .section-aboutme .profil {
+        float: left;
+        max-width: 200px;
+        margin-right: 10px;
+        margin-bottom: 5px;
+    }
+
+
+}
 @media (max-width: 800px) {
-    body {
-        padding-top: 20px;
+    
+    p {
+        font-size: 20px;
     }
-    nav ul {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-    }
-    nav li {
-        margin: 0!important;
-    }
-    nav a {
-        font-size: 24px;
-    }
-
-    .section-welcome p {
-        width: 100%;
-    }
-
-
-
-    .section-mywork {
-
-    }
-    .card {
-        width: 100%;
-        padding: 0;
-        margin-bottom: 50px;
-    }
-    .card img {
-        height: 300px;
-    }
-    .section-aboutme {
-        display: flex;
-        flex-direction: column-reverse;
-        flex-wrap: wrap;
-    }
-    .section-aboutme .left {
-        width: 100%;
-    }
-    .section-aboutme .right {
-        width: 100%;
-        display: flex;
-        margin-bottom: 20px;
-    }
-    .section-aboutme .right .profil {
-        width: 50%;
-        margin-right: 30px;
-    }
-    .section-aboutme .right ul a {
-        font-size: 30px;
-        margin: 15px 0;
+    .section-aboutme p {
+        font-size: 18px;
     }
 }

@@ -13,89 +13,81 @@
         <link href="https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&display=swap" rel="stylesheet"> 
     </head>
     <body>
-        <nav>
-            <ul>
-                <li><a href="#welcome">Home</a></li>
-                <li><a href="#mywork">My Work</a></li>
-                <li><a href="#aboutme">About Me</a></li>
-            </ul>
-        </nav>
         <div id="welcome" class="header">
             <h1>Baptiste Odet</h1>
             <span>welcome to my portfolio</span>
         </div>
-        <div class="section-welcome">
-            <p>Bienvenue sur mon portfolio. Je suis étudiant en physique à Lyon. Je me forme au développement informatique en autodidacte depuis plus de 5 ans. Je fais principalement des logiciels ou des applications web. Vous pouvez découvrir mes réalisations dans la section projets. Si vous voulez en savoir plus sur moi ou me contacter, rendez-vous sur la section à propos.</p>
-        </div>
         
-        <div id="mywork" class="header">
-            <h1>My Work</h1>
-            <span>discover my projects</span>
-        </div>
-        <div class="section-mywork">
-            <div class="card">
-                <img src="data/fga-thumbnail.png">
-                <div class="underimg">
-                    <span>Software</span>
-                    <span class="languages">C++, OpenGl, ImGui</span>
+        <div class="content">
+            <div class="block">
+                <div id="mywork" class="section-head">
+                    <img src="data/icons/web-programming.png">
+                    <h1>My Work</h1>
+                    <div class="accent" style="background: #445DE475"></div>
                 </div>
-                <p><span class="title">FGA - Fast Graphing & Analysis Software</span> is a data analysis software aim at students and scientists. It allows the user to draw curves on graphs and do analysis on them such as derivative, fourier transform, </p>
+                <div class="section-mywork">
+                    <div class="card">
+                        <img src="data/fga-thumbnail.png">
+                        <div class="underimg">
+                            <span>Software</span>
+                            <span class="languages">C++, OpenGl, ImGui</span>
+                        </div>
+                        <p><span class="title">FGA - Fast Graphing & Analysis Software</span> is a data analysis software aim at students and scientists. It allows the user to draw curves on graphs and do analysis on them such as derivative, fourier transform, </p>
+                    </div>
+
+                    <div class="card">
+                        <img src="data/thumbnail-noisevisualizer.PNG">
+                        <div class="underimg">
+                            <span>Simulation</span>
+                            <span class="languages">C++, OpenGl, ImGui</span>
+                        </div>
+                        <p><span class="title">Realtime Perlin Noise Visualizer</span> is a desktop application to visualize the effect of several parameters of the famouse PerlinNoise algorithm. Noise is generated in realtime in 1D 2D or 3D.</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="data/thumbnail-dice.PNG">
+                        <div class="underimg">
+                            <span>Script</span>
+                            <span class="languages">Python, OpenCV</span>
+                        </div>
+                        <p><span class="title">Realtime Dice Detection</span> is a python script that can detect faces of real dice throught a smartphone camera. </p>
+                    </div>
+
+                    <div class="card">
+                        <img src="data/thumbnail-protomuss.PNG">
+                        <div class="underimg">
+                            <span>Software</span>
+                            <span class="languages">HTML, CSS, JS</span>
+                        </div>
+                        <p><span class="title">ProTomuss - College’s grades</span> is a software aim at student of my university. The software display university marks in a more attractive way than the official website.</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="data/thumbnail-minimisation.PNG">
+                        <div class="underimg">
+                            <span>Simulation</span>
+                            <span class="languages">C++, ROOT(CERN)</span>
+                        </div>
+                        <p><span class="title">Minimisation</span> is a program used to test multiple minimisation algorithms with the purpose of solving the travelling salesman problem.</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="card">
-                <img src="data/thumbnail-noisevisualizer.PNG">
-                <div class="underimg">
-                    <span>Simulation</span>
-                    <span class="languages">C++, OpenGl, ImGui</span>
+            <div class="block">
+                <div id="aboutme" class="section-head">
+                    <img src="data/icons/avatar.png">
+                    <h1>About Me</h1>
+                    <div class="accent" style="background: #E4449175"></div>
                 </div>
-                <p><span class="title">Realtime Perlin Noise Visualizer</span> is a desktop application to visualize the effect of several parameters of the famouse PerlinNoise algorithm. Noise is generated in realtime in 1D 2D or 3D.</p>
-            </div>
-
-            <div class="card">
-                <img src="data/thumbnail-dice.PNG">
-                <div class="underimg">
-                    <span>Script</span>
-                    <span class="languages">Python, OpenCV</span>
+                <div class="section-aboutme">
+                    <img class="profil" src="data/profil.jpg">
+                    <ul>
+                        <li><a href="mailto:baptiste.odet1@gmail.com"><img src="data/icons/envelope.png"></a></li>
+                        <li><a href="https://github.com/Castaneche"><img src="data/icons/github.png"></a></li>
+                        <li><a href="https://www.linkedin.com/in/baptiste-odet-7b1280209"><img src="data/icons/linkedin.png"></a></li>
+                    </ul>
+                    <p>Passionné de développement informatique, je prépare un master de physique à l’université de Lyon afin de d’obtenir une double compétence informatique / physique. Je me forme en autodidacte depuis plus de 5 ans sur des languages comme C++ ou Python mais aussi sur les languages du web comme HTML, CSS, Javascript. J’ai travaillé sur des logiciels comme arduino, unity ou labview. A travers les projets que je réalise, j’aime allier le domaine scientifique à l’informatique. </p>
                 </div>
-                <p><span class="title">Realtime Dice Detection</span> is a python script that can detect faces of real dice throught a smartphone camera. </p>
-            </div>
-
-            <div class="card">
-                <img src="data/thumbnail-protomuss.PNG">
-                <div class="underimg">
-                    <span>Software</span>
-                    <span class="languages">HTML, CSS, JS, Electron</span>
-                </div>
-                <p><span class="title">ProTomuss - College’s grades</span> is a software aim at student of my university. The software display university marks in a more attractive way than the official website.</p>
-            </div>
-
-            <div class="card">
-                <img src="data/thumbnail-minimisation.PNG">
-                <div class="underimg">
-                    <span>Simulation</span>
-                    <span class="languages">C++, ROOT(CERN)</span>
-                </div>
-                <p><span class="title">Minimisation</span> is a program used to test multiple minimisation algorithms with the purpose of solving the travelling salesman problem.</p>
-            </div>
-        </div>
-    
-        <div id="aboutme" class="header">
-            <h1>About Me</h1>
-            <span>learn more about my motivations</span>
-        </div>
-        <div class="section-aboutme">
-            <div class="left">
-                <p>Passionné d’informatique je me forme en autodidacte depuis plus de 5 ans dans le domaine du développement. J’ai pu m’initier aux languages du web, aux languages tels que C++ et Python ou encore aux logiciels tels que arduino, unity, labview. A travers les différents projets que je réalise, j’aime allier le domaine scientifique (maths/physique) au domaine de l’informatique. Les simulations ou les logiciels scientifiques sont les axes majeurs que je souhaite poursuivre dans le futur. </p>
-                <p>C’est dans cette optique que j’étudie actuellement la physique à l’Université Claude Bernard Lyon 1. Après avoir validé une licence, j’ai intégré le master de physique en première année. Lorsque le temps me le permet je développe des projets afin de me former en autodidate pour avoir une double compétence informatique/physique à la fin de mes études. </p>
-            </div>
-            <div class="right">
-                <img class="profil" src="data/profil.jpg">
-                <ul>
-                    <li><a href=""><img src="data/icons/envelope.png"> Email</a></li>
-                    <li><a href=""><img src="data/icons/github.png"> GitHub</a></li>
-                    <li><a href=""><img src="data/icons/twitter.png"> Twitter</a></li>
-                    <li><a href=""><img src="data/icons/linkedin.png"> LinkedIn</a></li>
-                </ul>
             </div>
         </div>
     </body>
