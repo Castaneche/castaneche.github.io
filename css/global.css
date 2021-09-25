@@ -15,7 +15,7 @@ body {
     margin: auto;
     color: black;
     font-size: 17px;
-    opacity: 0;
+    opacity: 1;
     transition: opacity .5s;
 }
 

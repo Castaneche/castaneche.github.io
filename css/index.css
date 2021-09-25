@@ -125,7 +125,7 @@ body {
 
 
 .card:hover {
-    background: #e7e7e7;
+    background: #445ce431;
     scale: 1.01;
 }
 
@@ -160,6 +160,17 @@ body {
     margin-right: 20px;
 }
 
+.copyright-icons {
+    margin-top: 20px;
+}
+.copyright-icons,
+.copyright-icons a {
+    text-align: center;
+    font-size: 10px;
+    color: #e7e7e7;
+}
+
+
 @media (max-width: 1200px) {
     
     .content {
@@ -192,3 +203,4 @@ body {
         font-size: 18px;
     }
 }
+

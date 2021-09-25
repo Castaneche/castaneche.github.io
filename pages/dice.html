@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="../css/global.css">
         <link rel="stylesheet" href="../css/pages.css">
         <meta name="viewport" content="width=600">
-
+        
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap" rel="stylesheet">
@@ -14,19 +14,10 @@
     </head>
     <body>
         <nav>
-            <ul>
-                <li><a href="#welcome">Home</a></li>
-                <li><a href="#mywork">My Work</a></li>
-                <li><a href="#aboutme">About Me</a></li>
-            </ul>
+            <a class="home" href="../index.html">Home</a>
             <div class="nav-arrows">
-                <a href=""><- Previous</a>                
-                <a href="">Next -></a>                
-            </div>
-
-            <div class="burger">
-                <div></div>
-                <div></div>
+                <a href="noisevisualizer.html"><- Previous</a>                
+                <a href="protomuss.html">Next -></a>                
             </div>
         </nav>
         <div class="head">
@@ -89,20 +80,6 @@
             </video>
         </div>
     </body>
-    
-    
-    <script>
-        window.transitionToPage = function(href) {
-            document.querySelector('body').style.opacity = 0
-            setTimeout(function() { 
-                window.location.href = href
-            }, 500)
-        }
-
-        document.addEventListener('DOMContentLoaded', function(event) {
-            document.querySelector('body').style.opacity = 1
-        })
-    </script>
 </html>
 
     

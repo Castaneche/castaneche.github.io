@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Baptiste Odet</title>
+        <link rel="stylesheet" href="../css/global.css">
+        <link rel="stylesheet" href="../css/pages.css">
+        <meta name="viewport" content="width=600">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <nav>
+            <a class="home" href="../index.html">Home</a>
+            <div class="nav-arrows">
+                <a href="minimisation.html"><- Previous</a>                
+                <a href="noisevisualizer.html">Next -></a>                
+            </div>
+        </nav>
+        <div class="head">
+            <div class="left">
+                <h1 style="font-size: 55px;">FGA - Fast Graphing & Analysis Software</h1>
+                <span>Project #1</span>
+                <div class="techs">
+                    <img src="../data/icons/cpp_64x64.png">
+                    <img src="../data/icons/opengl.png">
+                </div>
+            </div>
+            <div class="right">
+                <div class="block">
+                    <h2>Duration</h2>
+                    <p>Ce projet est actuellement en développement.</p>
+                </div>
+                <div class="block">
+                    <h2>My Role</h2>
+                    <p>Je développe ce projet seul pour le moment.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="two-columns-35percent">
+            <div class="block">
+                <h2>Purpose of the project</h2>
+                <p>La plupart des logiciels utilisés en sciences aujourdhui dans les universités sont datés et non mis à jours. L'idée de ce projet est donc de fournir une alternative aux logiciels d'analyse de données que j'ai pu utiliser dans mon cursus. Ce logiciel veut permettre une analyse et visualisation de données rapide et efficace avec une plus grande marge de maneuvre sur des opérations scientifiques précises qui ne sont pas possible sur les logiciels grand public.</p>
+            </div>
+            <video controls>
+                <source src="../data/fga_overview.mp4"
+                        type="video/mp4">
+                Sorry, your browser doesn't support embedded videos.
+            </video>
+        </div>
+
+        <div class="two-columns">
+            <div class="block">
+                <h2>Approach</h2>
+                <ul>
+                    <li>L’application est codé en C++ et utilise les librairies optimisées de calculs et analyses scientifique.</li>
+                    <li>Le rendu de l’application est fait grâce à OpenGl et la partie interface grâce à Dear ImGui.</li>
+                    <li>L'accent est mis sur la rapidité, pas seulement en terme de performances mais surtout en terme d'interface utilisateur. En quelques clics il est possible de visualiser et d'analyser une courbe simplement.</li>
+                    <li>L'objectif est aussi de rendre accessible des opérations sur les courbes qui ne sont pas possibles sur certains logiciels grand public. Par exemple, beaucoup d'opérations courantes sur des courbes (tangente, dérivées, intégrales ...) ne sont pas possibles (ou alors difficile) sur Excel.</li>
+                </ul>
+            </div>
+            <div class="block">
+                <h2>Challenges</h2>
+                <ul>
+                    <li>La difficulté majeur est de pouvoir terminer</li>
+                    <li>La necessité d’avoir un rendu en temps réel m’a amener à utiliser les threads qui sont des outils puissants mais très délicats à maitriser. Dans ce projet, l’utilisateur manipule les paramètres à tout moment ce qui implique que les calculs doivent se faire de façon sécurisé dans le thread. </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="two-columns">
+            <div class="block">
+                <h2>Light</h2>
+                
+            </div>
+            <div class="block">
+                <h2>Dark</h2>
+                
+            </div>
+            <img src="../data/fga_light.PNG">
+            <img src="../data/fga_dark.PNG">
+        </div>
+
+        <div class="two-columns-35percent reverse">
+            <img src="../data/fga-styling1.png">
+            <div class="block">
+                <h2>Styling</h2>
+                <p>Chaque courbe possède un style propre. Il peut être modifié pour obtenir la courbe voulue. Il y a aussi possibilité d'ajouter des barres d'erreurs en chaque point de la courbe.</p>
+            </div>
+        </div>
+
+        <div class="two-columns-35percent">
+            <div class="block">
+                <h2>Analysis</h2>
+                <p>Différents modules permettent l'analyse des courbes. Il y a par exemple le module d'ajustement (fitting) qui permet d'ajuster une courbe selon un modèle donné. Ou encore le module de transformée de fourier qui donne le spectre en fréquence d'une courbe. On peut voir d'autres modules comme calculer la dérivée, l'intégrale ou encore résoudre des équations différentielles mais certains ne sont pas encore implémentés à ce stade.</p>
+            </div>
+            <img src="../data/fga_analysis.gif">
+        </div>
+
+        <div class="two-columns-35percent">
+            <div class="block">
+                <h2>Import & Export</h2>
+                <p>Les données peuvent être générée par le logiciel mais il est aussi possible d'importer des données extérieures stockées dans des fichiers csv ou texte. Le module d'importation/exportation est flexible et permet de choisir certains paramètres (le délimiteur, la direction, les labels...)</p>
+            </div>
+            <img src="../data/fga_export.PNG">
+        </div>
+
+
+        <div class="two-columns-35percent reverse">
+            <img src="../data/fga-website.gif">
+            <div class="block">
+                <h2>Website prototype</h2>
+                <p>Il est prévu de mettre en ligne un site pour télécharger le logiciel. Le site n'est pour le moment pas en ligne mais la maquette est déjà créée et fonctionnelle. Le site pourra être mis en ligne dès que le logiciel atteindra sa version 1.0.</p>
+            </div>
+        </div>
+    </body>
+
+</html>
+
+    

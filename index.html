@@ -21,90 +21,83 @@
         <div class="content">
             <div class="block">
                 <div id="mywork" class="section-head">
-                    <img src="data/icons/web-programming.png">
+                    <img src="data/icons/code64x64.png">
                     <h1>My Work</h1>
                     <div class="accent" style="background: #445DE475"></div>
                 </div>
                 <div class="section-mywork">
-                    <div class="card">
-                        <img src="data/fga-thumbnail.png">
+                    <a href="pages/fga.html" class="card">
+                        <img src="data/thumbnail-fga.PNG">
                         <div class="underimg">
                             <span>Software</span>
                             <span class="languages">C++, OpenGl, ImGui</span>
                         </div>
-                        <p><span class="title">FGA - Fast Graphing & Analysis Software</span> is a data analysis software aim at students and scientists. It allows the user to draw curves on graphs and do analysis on them such as derivative, fourier transform, </p>
-                    </div>
+                        <p><span class="title">FGA - Fast Graphing & Analysis Software</span> est un logiciel d'analyse de données. Il permet d'afficher des données sous forme de courbes et de réaliser des opérations tels que l'ajustement, la dérivée, l'intégrale, la tranformée de Fourier, etc... </p>
+                        </a>
 
-                    <div class="card">
-                        <img src="data/thumbnail-noisevisualizer.PNG">
+                    <a href="pages/noisevisualizer.html" class="card">
+                        <img src="data/thumbnail-ns.PNG">
                         <div class="underimg">
                             <span>Simulation</span>
                             <span class="languages">C++, OpenGl, ImGui</span>
                         </div>
-                        <p><span class="title">Realtime Perlin Noise Visualizer</span> is a desktop application to visualize the effect of several parameters of the famouse PerlinNoise algorithm. Noise is generated in realtime in 1D 2D or 3D.</p>
-                    </div>
+                        <p><span class="title">Perlin Noise Visualizer</span> est une application qui permet de visualiser l'effet des paramètres de l'algorithme de bruit de Perlin. Le bruit est généré en 1D 2D et 3D sous forme de graph, texture ou terrain.</p>
+                    </a>
 
-                    <div class="card">
-                        <img src="data/thumbnail-dice.PNG">
+                    <a href="pages/dice.html" class="card">
+                        <img src="data/thumbnail-d.PNG">
                         <div class="underimg">
                             <span>Script</span>
                             <span class="languages">Python, OpenCV</span>
                         </div>
-                        <p><span class="title">Realtime Dice Detection</span> is a python script that can detect faces of real dice throught a smartphone camera. </p>
-                    </div>
+                        <p><span class="title">Realtime Dice Detection</span> est un script qui se connecte à une caméra afin de détecter en temps réel les valeurs affichées sur les faces de dés.</p>
+                    </a>
 
-                    <div class="card">
-                        <img src="data/thumbnail-protomuss.PNG">
+                    <a href="pages/protomuss.html" class="card">
+                        <img src="data/thumbnail-pt.PNG">
                         <div class="underimg">
                             <span>Software</span>
                             <span class="languages">HTML, CSS, JS</span>
                         </div>
-                        <p><span class="title">ProTomuss - College’s grades</span> is a software aim at student of my university. The software display university marks in a more attractive way than the official website.</p>
-                    </div>
+                        <p><span class="title">ProTomuss - College’s grades</span> est un logiciel pour les étudiants de l'université de Lyon 1. Il permet de se connecter au site des notes universitaires et d'afficher les données de façon plus organisé et attractif que le site officiel.</p>
+                    </a>
 
-                    <div class="card">
-                        <img src="data/thumbnail-minimisation.PNG">
+                    <a href="pages/minimisation.html" class="card">
+                        <img src="data/thumbnail-minim.PNG">
                         <div class="underimg">
                             <span>Simulation</span>
                             <span class="languages">C++, ROOT(CERN)</span>
                         </div>
-                        <p><span class="title">Minimisation</span> is a program used to test multiple minimisation algorithms with the purpose of solving the travelling salesman problem.</p>
-                    </div>
+                        <p><span class="title">Minimisation</span> est un programme qui permet de tester les différents algorithmes de minimisation appliqué au problème du voyageur de commerce. Il est même possible de visualiser les étapes.</p>
+                    </a>
                 </div>
             </div>
 
             <div class="block">
                 <div id="aboutme" class="section-head">
-                    <img src="data/icons/avatar.png">
+                    <img src="data/icons/avatar64x64.png">
                     <h1>About Me</h1>
                     <div class="accent" style="background: #E4449175"></div>
                 </div>
                 <div class="section-aboutme">
                     <img class="profil" src="data/profil.jpg">
                     <ul>
-                        <li><a href="mailto:baptiste.odet1@gmail.com"><img src="data/icons/envelope.png"></a></li>
-                        <li><a href="https://github.com/Castaneche"><img src="data/icons/github.png"></a></li>
-                        <li><a href="https://www.linkedin.com/in/baptiste-odet-7b1280209"><img src="data/icons/linkedin.png"></a></li>
+                        <li><a href="mailto:baptiste.odet1@gmail.com"><img src="data/icons/enveloppe32x32.png"></a></li>
+                        <li><a href="https://github.com/Castaneche"><img src="data/icons/github32x32.png"></a></li>
+                        <li><a href="https://www.linkedin.com/in/baptiste-odet-7b1280209"><img src="data/icons/linkedin32x32.png"></a></li>
                     </ul>
                     <p>Passionné de développement informatique, je prépare un master de physique à l’université de Lyon afin de d’obtenir une double compétence informatique / physique. Je me forme en autodidacte depuis plus de 5 ans sur des languages comme C++ ou Python mais aussi sur les languages du web comme HTML, CSS, Javascript. J’ai travaillé sur des logiciels comme arduino, unity ou labview. A travers les projets que je réalise, j’aime allier le domaine scientifique à l’informatique. </p>
                 </div>
             </div>
         </div>
-    </body>
-    
-    
-    <script>
-        window.transitionToPage = function(href) {
-            document.querySelector('body').style.opacity = 0
-            setTimeout(function() { 
-                window.location.href = href
-            }, 500)
-        }
 
-        document.addEventListener('DOMContentLoaded', function(event) {
-            document.querySelector('body').style.opacity = 1
-        })
-    </script>
+        <div class="copyright-icons">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a>, 
+            <a href="https://www.flaticon.com/authors/gregor-cresnar" title="Gregor Cresnar">Gregor Cresnar</a>,
+            <a href="https://www.flaticon.com/fr/auteurs/those-icons" title="Those Icons">Those Icons</a>,
+            <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a>,
+            <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a>
+            from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    </body>
 </html>
 
     
