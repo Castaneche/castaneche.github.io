@@ -32,3 +32,10 @@ p {
 ul {
     list-style: none;
 }
+
+.copyright {
+    color: #e7e7e7;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 50px;
+}
