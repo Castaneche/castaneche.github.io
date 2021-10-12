@@ -20,6 +20,7 @@
                 <a href="noisevisualizer.html">Next -></a>                
             </div>
         </nav>
+        <a class="dl" href="../data/fga_demo.zip">Download demo</a>
         <div class="head">
             <div class="left">
                 <h1 style="font-size: 55px;">FGA - Fast Graphing & Analysis Software</h1>
@@ -32,7 +33,7 @@
             <div class="right">
                 <div class="block">
                     <h2>Durée</h2>
-                    <p>Ce projet est actuellement en développement. L'idée est venue début 2021 et le développement à commencé en juin 2021.</p>
+                    <p>Ce projet est actuellement en développement.</p>
                 </div>
                 <div class="block">
                     <h2>Mon Role</h2>
@@ -57,8 +58,8 @@
             <div class="block">
                 <h2>Approche</h2>
                 <ul style="font-size: 20px;">
-                    <li>L’application est codé en C++ pour permettre d'utiliser les librairies optimisées de calculs et d'analyses scientifique. Le programme intégrera du python pour des calculs spécifiques car ce language s'est beaucoup développé ces dernières années et propose des fonctionnalités intéressantes.</li>
-                    <li>Le rendu de l’application est fait grâce à OpenGl et la partie interface grâce à Dear ImGui.</li>
+                    <li>L’application est codé en C++ et utilise les librairies optimisées de calculs et d'analyses scientifique (gsl).</li>
+                    <li>Le rendu de l’application est fait grâce à OpenGl et la partie interface grâce à <a href="https://github.com/ocornut/imgui">Dear ImGui</a>.</li>
                     <li>L'accent est mis sur la rapidité, pas seulement en terme de performances mais surtout en terme d'interface utilisateur. En quelques clics il est possible de visualiser et d'analyser une courbe simplement.</li>
                     <li>L'objectif est aussi de rendre accessible des opérations sur les courbes qui ne sont pas possibles sur certains logiciels grand public. Par exemple, beaucoup d'opérations courantes sur des courbes (tangente, dérivées, intégrales ...) ne sont pas possibles (ou alors difficile) sur Excel.</li>
                 </ul>
@@ -67,7 +68,7 @@
                 <h2>Défis</h2>
                 <ul style="font-size: 20px;">
                     <li>Ce projet étant assez imposant, la difficulté majeur est de pouvoir terminer le développement et de sortir une version fonctionnelle dans un temps raisonnable.</li>
-                    <li>L'accent est mis sur la simplicité de l'interface utilisateur. Comme le nombre de fonctionnalitées est grand il devient difficile d'obtenir une interface simple sans utiliser une infinitée de sous-menu. Pour remédier en partie à ce problème, le logiciel est basé sur du drag & drop, chaque courbe peut être glissée déposée dans les différents modules.</li>
+                    <li> Comme le nombre de fonctionnalitées est grand il devient difficile d'obtenir une interface simple sans utiliser une infinitée de sous-menu. Pour remédier en partie à ce problème, chaque courbe peut être glissée déposée sur les différents modules.</li>
                     <li>Lorsque l'on traite des données scientifiques il faut une rapidité et une méthode stricte pour que le logiciel reste rapide et que l'analyse soit précise. Cela requiert une connaissance des algorithmes de calcul numérique afin d'optimiser au maximum le temps de calcul.</li>
                 </ul>
             </div>
@@ -75,11 +76,11 @@
 
         <div class="two-columns">
             <div class="block">
-                <h2>Clair</h2>
+                <h2>Thème Clair</h2>
                 
             </div>
             <div class="block">
-                <h2>Sombre</h2>
+                <h2>Thème Sombre</h2>
                 
             </div>
             <img src="../data/fga_light.PNG">
