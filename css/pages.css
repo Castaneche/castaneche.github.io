@@ -112,3 +112,15 @@ img {
     opacity: 1;
     bottom: 0;
 }
+
+
+
+
+@media (max-width: 700px) {
+    .head > span {
+        display: none;
+    }
+    .head > div {
+        margin-left: 0;
+    }
+}
