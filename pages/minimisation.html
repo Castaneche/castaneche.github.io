@@ -13,70 +13,58 @@
         <link href="https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&display=swap" rel="stylesheet"> 
     </head>
     <body>
-        <nav>
-            <a class="home" href="../index.html">Home</a>
-            <div class="nav-arrows">
-                <a href="protomuss.html"><- Previous</a>                
-                <a href="fga.html">Next -></a>                
+        <nav id="top">
+            <div class="logo">
+                <h1>Baptiste Odet</h1>
+                <h2>Portfolio</h2>
             </div>
+            <a href="../index.html">Home</a>
+            <a href="dice.html"><span><-</span> Previous</a>
+            <a href="fga.html">Next <span>-></span></a>
         </nav>
-        <div class="head">
-            <div class="left">
-                <h1>Minimisation</h1>
-                <span>Project #5</span>
-                <div class="techs">
-                    <img src="../data/icons/cpp_64x64.png">
-                </div>
-            </div>
-            <div class="right">
-                <div class="block">
-                    <h2>Durée</h2>
-                    <p>Ce projet a duré 1 mois. 1 semaine de réflexion, 2 semaine de développement, 1 semaine de test.</p>
-                </div>
-                <div class="block">
-                    <h2>Mon Role</h2>
-                    <p>J’ai travaillé en groupe avec un étudiant de ma formation. Il a travaillé sur les algorithmes, je me suis occupé du code.</p>
-                </div>
+        
+        <div style="margin-top: 100px" class="head">
+            <h1>Minimisation</h1>
+            <span>Description :</span>
+            <div>
+                <p>Programme qui permet de tester les différents algorithmes de minimisation appliqués au problème du voyageur de commerce. Il est même possible de visualiser les étapes de calcul.</p>
+                <div><span class="blackbox">Type</span> Simulation</div>
+                <div><span class="blackbox">Technologies</span> C++</div>
+                <div><span class="blackbox">Librairies</span> ROOT (CERN)</div>
             </div>
         </div>
 
-        <div class="two-columns-35percent">
-            <div class="block">
-                <h2>But du projet</h2>
-                <p>Le projet s’inscrit dans mon cursus universitaire dans l’unité d’enseignement ‘méthodes numériques’. Le but est de minimiser le temps de trajet d’un vendeur qui se déplace de villes en villes. Le problème est schématisé par les distances entre différents points (qui représentent les villes) sur un espace deux dimensions. Le but est de comparer différents algorithmes de minimisation, ici : méthode naive, le recuit simulé et l’algorithme génétique. La vidéo montre la visualisation étapes par étapes de la méthode du recuit simulé.</p>
-            </div>
-            <video controls>
-                <source src="../data/Minimisation_overview.mp4"
-                        type="video/mp4">
-                Sorry, your browser doesn't support embedded videos.
-            </video>
-        </div>
+        
+        <h2>Contexte</h2>
+        <p>Lors de mon cursus scientifique j’ai été amené à travailler sur les méthodes numériques : ajustement, dérivée, minimisation, equations différentielles, analyse... Plusieurs projets étaient proposés et j’ai choisi de travailler sur le problème du voyageur de commerce qui est un problème récurrent en informatique.</p>
 
-        <div class="two-columns">
-            <div class="block">
-                <h2>Approche</h2>
-                <ul>
-                    <li>Le projet utilise la librarie ROOT développée par le CERN qui permet le calcul scientifique et aussi l'affichage directement en C++.</li>
-                    <li>La méthode naïve calcule la distance parcourue sur tous les chemins possibles. Elle est très juste mais très longue car le temps de calcul augmente exponentiellement suivant le nombre de points à parcourir.</li>
-                    <li>La méthode du recuit simulé se base sur l'expérience physique de refroidissement d'un matériau. Elle permet d'atteindre le minimum pour un grand nombre de points en un temps plus raisonnable par rapport à la méthode naïve.</li>
-                    <li>La méthode génétique se base sur le concept de reproduction et de mutation des gènes. On part avec une population de différents chemins qui sont ensuite modifiés à chaque itération pour obtenir un résultat satisfaisant.</li>
-                </ul>
-            </div>
-            <div class="block">
-                <h2>Défis</h2>
-                <ul>
-                    <li>Le plus compliqué a été de transcrire le problème en algorithme et de faire les bons choix pour obtenir un résultat convaincant. La méthode du recuit simulé a été transcrite à la lettre et on a remarqué qu'elle fonctionnait très bien pour ce problème. La méthode génétique a donné des résultats mitigés et nous ne sommes pas arrivé à surpasser la méthode du recuit simulé.</li>
-                    <li>La librairie ROOT est une librairie développée par de nombreux scientifiques et est par conséquent très vaste. Il a fallu trouver et choisir les composants intéressant pour notre étude et maitriser la philosophie de cette librairie.</li>
-                    <li>Il a fallu aussi tenir compte des différentes erreurs possible lorsque l'on travaille avec des grands et petits nombres sur ordinateur (cancellation, absorption...).</li>
-                </ul>
-            </div>
-        </div>
-        <div class="block">
-            <h2>Final</h2>
-            <img src="../data/simulatedannealing.PNG">
-        </div>
+        <h2>Le projet</h2>
+        <p>Le but était de minimiser le temps de parcours d’un arbre de N points placés sur un espace à deux dimensions. Les points représentant les villes que le voyageur doit traverser et l’espace entre les points la distance entre les villes. Aucun point de départ n’était imposé, le but était de tester trois méthodes : naïve, recuit simulé et génétique. </p>
 
+        <h2>Technique</h2>
+        <p>La librairie ROOT développée par le CERN était imposée dans le but de se familiariser avec les outils que les scientifiques utilisent. Le projet a donc été développé en C++ et l’affichage se fait grâce à ROOT.</p>
 
+        <h2>Méthode naïve</h2>
+        <p>Cette méthode explore tous les chemins possible est effectue garde le plus court. Elle permet de trouver le minimum dans 100% des cas cependant le temps de calcul peut devenir très grand lorsque que le nombre de points à parcourir augmente.</p>
+        <img src="../data/Minimisation_naive.PNG">
+
+        <h2>Méthode recuit simulé</h2>
+        <p>Cette méthode fait l’analogie avec le refroidissement d’un système physique. Lorsqu’un système est chaud, sa matière est très agitée et plus il refroidi plus l’agitation diminue pour tendre vers un minimum d’énergie. C’est en faisant cette analogie que l’on essaye de résoudre le problème du voyageur de commerce. On part d’un chemin aléatoire puis on permute le parcours avec une certaine probabilité en gardant le chemin le plus court à chaque étape. Au début la probabilité est grande donc le chemin est amené à changer très fortement puis au cours du temps la probabilité de changement diminue et le chemin s’affine jusqu’à obtenir le chemin le plus court.</p>
+        <p>Cette méthode a bien fonctionné pour notre problème car il est possible d’augmenter le nombre de points à parcourir sans augmenter le temps de calcul de façon exponentiel. Cette méthode est donc bien meilleure que la précédente.</p>
+        <video controls>
+            <source src="../data/Minimisation_overview.mp4"
+                    type="video/mp4">
+            Sorry, your browser doesn't support embedded videos.
+        </video>
+
+        <h2>Méthode génétique</h2>
+        <p>Cette fois l’analogie se fait du côté de la selection naturelle. On prend une population de parcours aléatoires puis on applique une série de permutation. On effectue ensuite une sélection sur la population de départ en prenant les chemins intéressant puis on répète la procédure. Cette méthode n’a pas fonctionné comme prévu et a donc été abandonnée. Nous avons pu trouver le minimum que pour un nombre de points à parcourir faible.</p>
+
+        <div class="bottom-nav">
+            <a href="dice.html"><span><-</span> Previous</a>
+            <a href="#top">Back to Top</a>
+            <a href="fga.html">Next <span>-></span></a>
+        </div>
 
         <div class="copyright">©Copyright - 2021 - Odet Baptiste</div>
     </body>

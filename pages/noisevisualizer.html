@@ -13,85 +13,65 @@
         <link href="https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&display=swap" rel="stylesheet"> 
     </head>
     <body>
-        <nav>
-            <a class="home" href="../index.html">Home</a>
-            <div class="nav-arrows">
-                <a href="fga.html"><- Previous</a>                
-                <a href="dice.html">Next -></a>                
+        <nav id="top">
+            <div class="logo">
+                <h1>Baptiste Odet</h1>
+                <h2>Portfolio</h2>
             </div>
+            <a href="../index.html">Home</a>
+            <a href="fga.html"><span><-</span> Previous</a>
+            <a href="protomuss.html">Next <span>-></span></a>
         </nav>
-        <a class="dl" href="https://github.com/Castaneche/NoiseVisualizer/releases/download/v1.2/NoiseVisualizer_v1.2.zip">Download v1.2</a>
+
+        <video controls>
+            <source src="../data/NoiseVisualizer_overview.mp4"
+                    type="video/mp4">
+            Sorry, your browser doesn't support embedded videos.
+        </video>
+        
         <div class="head">
-            <div class="left">
-                <h1>Perlin Noise Visualizer</h1>
-                <span>Project #2</span>
-                <div class="techs">
-                    <img src="../data/icons/cpp_64x64.png">
-                    <img src="../data/icons/opengl.png">
-                </div>
-            </div>
-            <div class="right">
-                <div class="block">
-                    <h2>Durée</h2>
-                    <p>Le développement de ce projet a duré environ 2 mois.</p>
-                </div>
-                <div class="block">
-                    <h2>Mon Role</h2>
-                    <p>J’ai développé ce projet seul. Avec un camarade en licence d’informatique, nous avons pu nous entraider sur la partie algorithme car il développait un projet similaire pour ses études.</p>
-                </div>
+            <h1>Perlin Noise Visualizer</h1>
+            <span>Description :</span>
+            <div>
+                <p>Logiciel qui permet de visualiser en temps réel le bruit de Perlin. Le bruit est généré en 1D 2D et 3D sous forme de graphique, texture ou terrain.</p>
+                <div><span class="blackbox">Type</span> Software</div>
+                <div><span class="blackbox">Technologies</span> C++</div>
+                <div><span class="blackbox">Librairies</span> OpenGl, Dear ImGui</div>
+                <a class="dl" href="https://github.com/Castaneche/NoiseVisualizer/releases/download/v1.2/NoiseVisualizer_v1.2.zip">Download v1.2</a>
             </div>
         </div>
 
-        <div class="two-columns-35percent">
-            <div class="block">
-                <h2>But du projet</h2>
-                <p>Le but de ce projet est de pouvoir visualiser en plusieurs dimensions un algorithme de génération de bruit cohérent. Ici, on s’intéresse au bruit de Perlin qui est un algorithme très utilisé dans le domaine du jeux vidéo car il est à l’origine des cartes (telles que minecraft). L’idée est de voir les effets des paramètres de l’algorithme (octaves, fréquence, persistance...) en temps réel et dans trois différentes dimensions (graph, texture et terrain). Le projet donne lieu à une application de bureau codée en C++. </p>
-            </div>
-            <video controls>
-                <source src="../data/NoiseVisualizer_overview.mp4"
-                        type="video/mp4">
-                Sorry, your browser doesn't support embedded videos.
-            </video>
-        </div>
+        
+        <h2>Contexte</h2>
+        <p>Dans l’idée d’apprendre le rendu 2D et 3D j’ai souhaité réaliser un projet visuel. Comme le bruit de Perlin est un algorithme très répandu mais peu expliqué j’ai donc choisi de réaliser un logiciel permettant de jouer avec les paramètres afin de visualiser les effets.</p>
 
-        <div class="two-columns">
-            <div class="block">
-                <h2>Approche</h2>
-                <ul>
-                    <li>L’application est codée en C++ afin d’avoir une grande flexibilité au niveau de l’algorithme. </li>
-                    <li>Le rendu de l’application est fait grâce à OpenGl et la partie interface grâce à Dear ImGui.</li>
-                    <li>Une interface ‘setup’ permet à l’utilisateur de choisir les paramètres de l’algorithme : la graine du générateur pseudo-aléatoire, octaves, persistance, fréquence, mais aussi la résolution de la texture ou du terrain que l’on souhaite visualiser. </li>
-                    <li>Les textures ou terrains générés et visualisés dans l’application peuvent être exportés en format image ou objet. </li>
-                </ul>
-            </div>
-            <div class="block">
-                <h2>Défis</h2>
-                <ul>
-                    <li>Ce projet a été un moyen de me familiariser avec OpenGl et la librairie Dear ImGui. N’ayant jamais réellement utilisé ces technologies, certains aspects tels que le rendu d’objets 3D ou le bon fonctionnement de l’interface utilisateur se sont avérés complexes à maîtriser.</li>
-                    <li>Dans ce projet, l’utilisateur manipule les paramètres à tout moment ce qui implique que les calculs doivent se faire rapidement et en parallèle.</li>
-                </ul>
-            </div>
-        </div>
+        <h2>But du projet</h2>
+        <p>Le but de ce projet est de pouvoir visualiser en plusieurs dimensions un algorithme de génération de bruit cohérent (ici le bruit de Perlin). L’idée est de voir les effets des paramètres de l’algorithme (octaves, fréquence, persistance...) en temps réel et dans trois différentes dimensions (graphique, texture et terrain).</p>
 
-        <div class="two-columns-35percent reverse">
-            <img src="../data/NoiseVisualizer_octaves.png">
-            <div class="block">
-                <h2>Octaves</h2>
-                <p>Les octaves sont une superposition de différents bruits avec différentes fréquences qui permettent de former un bruit final plus subtil, plus aléatoire. On observe l’effet ici sur le graphe et la texture avec en haut une octave et en bas plusieurs octaves.</p>
-            </div>
-        </div>
+        <h2>Technique</h2>
+        <p>Le logiciel est codé en C++ et utilise OpenGl pour le rendu graphique. L’interface est construite grâce à la librairie Dear ImGui. Le projet est multithread c’est à dire que chaque action de l’utilisateur sur les paramètres de l’algorithme lance le calcul en parallèle. Cela permet de ne pas bloquer l’application lors de long calculs et aussi de pouvoir visualiser en temps réel les modifications.</p>
 
-        <div class="two-columns">
-            <div class="block">
-                <h2>Palette de couleurs</h2>
-                <p>Une interface permet à l’utilisateur de sélectionner une gamme de couleurs, et même de positionner chaque couleur afin d’avoir le rendu de texture attendu. Ici, on a par exemple un rendu faisant penser à une vue aérienne.</p>
-            </div>
-            <div class="block">
-                <h2>Terrain</h2>
-                <p>La texture générée peut être visualisée en 3D (terrain). L’amplitude du bruit peut être modifiée afin d’obtenir de plus grandes montagnes.</p>
-            </div>
-            <img src="../data/NoiseVisualizer_texture_color2.gif">
-            <img src="../data/NoiseVisualizer_terrain1.gif">
+        <h2>Graphique</h2>
+        <p>Le bruit peut être visualisé en une dimension sur un graphique avec en abscisse l’incrément et en ordonnée la valeur du bruit normalisée. </p>
+        <img src="../data/NoiseVisualizer_graph.gif">
+
+        <h2>Texture</h2>    
+        <p>Il est possible de générer une texture de bruit et de visualiser en temps réel les changements de paramètres de l’algorithme. Ces textures peuvent être exportée en fichier image pour être utilisée dans d’autres logiciels.</p>
+        <img src="../data/NoiseVisualizer_texture.gif">
+
+        <h2>Terrain</h2>
+        <p>La texture générée peut être visualisée en 3D (terrain). La texture est appliquée sur un plan avec en chaque point une amplitude liée à la valeur du bruit. L’amplitude peut être modifiée afin d’obtenir de plus grands dénivelés.</p>
+        <img src="../data/NoiseVisualizer_terrain1.gif">
+
+        
+        <h2>Colormap</h2>
+        <p>Une interface permet à l’utilisateur de sélectionner une gamme de couleurs, et de positionner chaque couleur afin d’avoir le rendu de texture attendu. Cette fonctionnalité (non disponible dans les librairies) a été dévelopée spécialement pour ce projet. Ici, on a par exemple un rendu faisant penser à une vue aérienne. On peut voir à gauche l’interface permettant de jouer sur les paramètres de couleur.</p>
+        <img src="../data/NoiseVisualizer_texture_color2.gif">
+
+        <div class="bottom-nav">
+            <a href="fga.html"><span><-</span> Previous</a>
+            <a href="#top">Back to Top</a>
+            <a href="protomuss.html">Next <span>-></span></a>
         </div>
 
         <div class="copyright">©Copyright - 2021 - Odet Baptiste</div>

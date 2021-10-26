@@ -13,114 +13,75 @@
         <link href="https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&display=swap" rel="stylesheet"> 
     </head>
     <body>
-        <nav>
-            <a class="home" href="../index.html">Home</a>
-            <div class="nav-arrows">
-                <a href="minimisation.html"><- Previous</a>                
-                <a href="noisevisualizer.html">Next -></a>                
+        <nav id="top">
+            <div class="logo">
+                <h1>Baptiste Odet</h1>
+                <h2>Portfolio</h2>
             </div>
+            <a href="../index.html">Home</a>
+            <a href="minimisation.html"><span><-</span> Previous</a>
+            <a href="noisevisualizer.html">Next <span>-></span></a>
         </nav>
-        <a class="dl" href="../data/fga_demo.zip">Download demo</a>
+
+        <video controls>
+            <source src="../data/fga_overview.mp4"
+                    type="video/mp4">
+            Sorry, your browser doesn't support embedded videos.
+        </video>
+        
         <div class="head">
-            <div class="left">
-                <h1 style="font-size: 55px;">FGA - Fast Graphing & Analysis Software</h1>
-                <span>Project #1</span>
-                <div class="techs">
-                    <img src="../data/icons/cpp_64x64.png">
-                    <img src="../data/icons/opengl.png">
-                </div>
-            </div>
-            <div class="right">
-                <div class="block">
-                    <h2>Durée</h2>
-                    <p>Ce projet est actuellement en développement.</p>
-                </div>
-                <div class="block">
-                    <h2>Mon Role</h2>
-                    <p>Je développe ce projet seul (pour le moment) durant mon temps libre.</p>
-                </div>
+            <h1>FGA - Fast Graphing & Analysis Software</h1>
+            <span>Description :</span>
+            <div>
+                <p>Logiciel d'analyse de données. Il permet d'afficher des données sous forme de courbes et de réaliser des opérations tels que l'ajustement, la dérivée, l'intégrale, la transformée de Fourier, etc... </p>
+                <div><span class="blackbox">Type</span> Software</div>
+                <div><span class="blackbox">Technologies</span> C++</div>
+                <div><span class="blackbox">Librairies</span> OpenGl, Dear ImGui, GSL</div>
+                <a class="dl" href="../data/fga_demo.zip">Download demo version</a>
             </div>
         </div>
 
-        <div class="two-columns-35percent">
-            <div class="block">
-                <h2>But du projet</h2>
-                <p>La plupart des logiciels utilisés aujourd'hui dans les universités sont datés et non mis à jours. L'idée de ce projet est donc de fournir une alternative aux logiciels d'analyse de données que j'ai pu utiliser dans mon cursus. Ce logiciel veut permettre une analyse et visualisation de données rapide et efficace avec une plus grande marge de maneuvre sur des opérations scientifiques précises qui ne sont pas possible sur les logiciels grand public (ex : Excel).</p>
-            </div>
-            <video controls>
-                <source src="../data/fga_overview.mp4"
-                        type="video/mp4">
-                Sorry, your browser doesn't support embedded videos.
-            </video>
-        </div>
+        
+        <h2>Contexte</h2>
+        <p>La plupart des logiciels utilisés aujourd'hui dans les universités sont datés et non mis à jours. L'idée de ce projet est donc de fournir une alternative aux logiciels d'analyse de données que j'ai pu utiliser dans mon cursus.</p>
 
-        <div class="two-columns">
-            <div class="block">
-                <h2>Approche</h2>
-                <ul style="font-size: 20px;">
-                    <li>L’application est codée en C++ et utilise les librairies optimisées de calculs et d'analyses scientifique (gsl).</li>
-                    <li>Le rendu de l’application est fait grâce à OpenGl et la partie interface grâce à <a href="https://github.com/ocornut/imgui">Dear ImGui</a>.</li>
-                    <li>L'accent est mis sur la rapidité, pas seulement en terme de performances mais surtout en terme d'interface utilisateur. En quelques clics il est possible de visualiser et d'analyser une courbe simplement.</li>
-                    <li>L'objectif est aussi de rendre accessible des opérations sur les courbes qui ne sont pas possibles sur certains logiciels grand public. Par exemple, beaucoup d'opérations courantes sur des courbes (tangente, dérivées, intégrales ...) ne sont pas possibles (ou alors difficile) sur Excel.</li>
-                </ul>
-            </div>
-            <div class="block">
-                <h2>Défis</h2>
-                <ul style="font-size: 20px;">
-                    <li>Ce projet étant assez imposant, la difficulté majeur est de pouvoir terminer le développement et de sortir une version fonctionnelle dans un temps raisonnable.</li>
-                    <li> Comme le nombre de fonctionnalitées est grand il devient difficile d'obtenir une interface simple sans utiliser une infinitée de sous-menu. Pour remédier en partie à ce problème, chaque courbe peut être glissée déposée sur les différents modules.</li>
-                    <li>Lorsque l'on traite des données scientifiques il faut une rapidité et une méthode stricte pour que le logiciel reste rapide et que l'analyse soit précise. Cela requiert une connaissance des algorithmes de calcul numérique afin d'optimiser au maximum le temps de calcul.</li>
-                </ul>
-            </div>
-        </div>
+        <h2>Approche</h2>
+        <p>Toutes les courbes peuvent être glissée et déposée rapidement dans un graphique ou dans les modules d’analyse de cette façon le logiciel est rapide et simple d’utilisation. Toujours dans un but de simplicité, toutes les fonctionnalités sont disponibles directement sur l’interface principale sans chercher dans de multiples sous menus. </p>
+        <p>Lors du développement, une attention particulière a été portée sur la clarté et l’organisation du code car c’est un projet assez imposant. Cela a permis de développer rapidement et de rajouter des fonctionnalités sans problème (le projet n’est pas open source pour l’instant)</p>
+        <p>Le logiciel est codé avec des librairies légères et compilé grâce à CMake pour être portable, c’est à dire fonctionnel sur clé usb (par exemple).</p>
 
-        <div class="two-columns">
-            <div class="block">
-                <h2>Thème Clair</h2>
-                
-            </div>
-            <div class="block">
-                <h2>Thème Sombre</h2>
-                
-            </div>
+        <h2>Technique</h2>
+        <p>Le logiciel est entièrement codé en C++ et utilise OpenGl pour le rendu graphique. L’interface est réalisée grâce à la librairie <a href="https://github.com/ocornut/imgui">Dear ImGui</a> (et <a href="https://github.com/epezent/implot">ImPlot</a>) que j’apprécie tout particulièrement pour la rapidité et la simplicité du développement. Tout est paramètrable, ce qui a permis de pouvoir obtenir l’apparence que je souhaitais. Pour ce qui est de l’analyse scientifique, le choix s’est porté sur la librairie <a href="https://www.gnu.org/software/gsl/">GSL</a> pour la variété et flexibilité des opérations numériques qu’elle offre. </p>
+
+        <h2>Style</h2>
+        <p>Chaque courbe possède un style propre. Il peut être modifié pour obtenir le style de courbe voulu. Il y a aussi possibilité d'ajouter des barres d'erreurs en chaque point de la courbe.</p>
+        <img src="../data/fga-styling1.PNG">
+
+        <h2>Thèmes</h2>    
+        </div>
             <img src="../data/fga_light.PNG">
             <img src="../data/fga_dark.PNG">
         </div>
 
-        <div class="two-columns-35percent reverse">
-            <img src="../data/fga-styling1.PNG">
-            <div class="block">
-                <h2>Style</h2>
-                <p>Chaque courbe possède un style propre. Il peut être modifié pour obtenir la courbe voulue. Il y a aussi possibilité d'ajouter des barres d'erreurs en chaque point de la courbe.</p>
-            </div>
+
+        <h2>Analyse</h2>
+        <p>Plusieurs modules permettent l’analyse numérique des courbes. Il est possible de calculer une dérivée, une intégrale, de faire un ajustement de suivant un modèle donné, d’obtenir le spectre en fréquence par transformée de fourier...</p>
+        <img src="../data/fga_analysis.gif">
+
+        
+        <h2>Import & Export</h2>
+        <p>Les données peuvent être générée par le logiciel mais il est aussi possible d'importer des données extérieures stockées dans des fichiers csv ou texte. Le module d'importation / exportation est flexible et permet de choisir certains paramètres (le délimiteur, la direction, les labels...)</p>
+
+
+        <h2>Site</h2>
+        <p>Il est prévu de déployer un site pour télécharger ou se renseigner sur le logiciel. Le site n'est pour le moment pas en ligne mais la maquette est déjà créée et fonctionnelle. Il pourra être mis en ligne dès que le logiciel sera terminé.</p>
+        <img src="../data/fga-website.gif">
+
+        <div class="bottom-nav">
+            <a href="minimisation.html"><span><-</span> Previous</a>
+            <a href="#top">Back to Top</a>
+            <a href="noisevisualizer.html">Next <span>-></span></a>
         </div>
-
-        <div class="two-columns-35percent">
-            <div class="block">
-                <h2>Analyse</h2>
-                <p>Différents modules permettent l'analyse des courbes. Il y a par exemple le module d'ajustement (fitting) qui permet d'ajuster une courbe selon un modèle donné. Il y a aussi le module de transformée de fourier qui donne le spectre en fréquence d'une courbe. On peut voir d'autres modules comme le calcul de dérivée, l'intégrale ou encore résoudre des équations différentielles mais certains ne sont pas encore implémentés à ce stade.</p>
-            </div>
-            <img src="../data/fga_analysis.gif">
-        </div>
-
-        <div class="two-columns">
-            <div class="block">
-                <h2>Import & Export</h2>
-                <p>Les données peuvent être générée par le logiciel mais il est aussi possible d'importer des données extérieures stockées dans des fichiers csv ou texte. Le module d'importation / exportation est flexible et permet de choisir certains paramètres (le délimiteur, la direction, les labels...)</p>
-            </div>
-            <img src="../data/fga_export.PNG">
-        </div>
-
-
-        <div class="two-columns-35percent reverse">
-            <img src="../data/fga-website.gif">
-            <div class="block">
-                <h2>Site internet</h2>
-                <p>Le site n'est pour le moment pas en ligne mais la maquette est déjà créée et fonctionnelle. Le site pourra être mis en ligne dès que le logiciel sera terminé.</p>
-            </div>
-        </div>
-
-
 
         <div class="copyright">©Copyright - 2021 - Odet Baptiste</div>
     </body>
