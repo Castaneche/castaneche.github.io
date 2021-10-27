@@ -8,10 +8,12 @@ body {
 }
 
 .welcomeimg {
-    width: 100%;
+    width: auto;
     height: calc(100vh - 100px);
     object-fit: cover;
     object-position: center;
+    display: block;
+    margin: auto;
 }
 .section {
     margin-bottom: 200px;
@@ -152,7 +154,8 @@ body {
 
 @media (max-width: 700px) {
     .welcomeimg {
-        height: 600px;
+        width: 100%;
+        height: auto;
     }
 
     .about {
