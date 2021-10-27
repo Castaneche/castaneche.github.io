@@ -102,7 +102,7 @@ img {
     display: block;
     width: 100%;
     height: 5px;
-    bottom: -20px;
+    bottom: -10px;
     left: 0;
     background-color: #5C58FF;
     opacity: 0;
@@ -110,7 +110,7 @@ img {
 }
 .bottom-nav a:hover::after {
     opacity: 1;
-    bottom: 0;
+    bottom: 5px;
 }
 
 

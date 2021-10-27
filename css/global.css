@@ -77,14 +77,14 @@ nav a::after {
     display: block;
     width: calc(100% - 45px);
     height: 5px;
-    bottom: -20px;
+    bottom: -10px;
     background-color: #5C58FF;
     opacity: 0;
     transition: opacity .5s, bottom .4s;
 }
 nav a:hover::after {
     opacity: 1;
-    bottom: 0;
+    bottom: 10px;
 }
 
 
