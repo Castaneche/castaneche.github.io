@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Baptiste Odet</title>
+        <link rel="stylesheet" href="../../css/global.css">
+        <link rel="stylesheet" href="../../css/pages.css">
+        <meta name="viewport" content="width=600">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <nav id="top">
+            <div class="logo">
+                <h1>Baptiste Odet</h1>
+                <h2>Portfolio</h2>
+            </div>
+            <a class="item" href="../index.html">Home</a>
+            <a class="item" href="noisevisualizer.html"><span><-</span> Previous</a>
+            <a class="item" href="dice.html">Next <span>-></span></a>
+            <div class="lang">
+                <a class="lang-active" href="">EN</a>
+                <a href="../../pages/protomuss.html">FR</a>
+            </div>
+        </nav>
+
+        <video controls>
+            <source src="../../data/ProTomuss_overview.mp4"
+                    type="video/mp4">
+            Sorry, your browser doesn't support embedded videos.
+        </video>
+        
+        <div class="head">
+            <h1>ProTomuss</h1>
+            <span>Description :</span>
+            <div>
+                <p>Software for the students of Lyon 1. It allows you to connect to the university grades site and to display the data in a more organized and attractive way than the official site.</p>
+                <div><span class="blackbox">Type</span> Logiciel</div>
+                <div><span class="blackbox">Technologies</span> Electron, NodeJS, HTML, CSS, JavaScript, Python</div>
+            </div>
+        </div>
+
+        
+        <h2>Context</h2>
+        <p>The official website allowing to consult the university grades is not very visually attractive. In an effort to improve the interface and to learn new technologies, I decided to develop a desktop application that would allow you to consult your grades directly on Windows without using a browser. </p>
+
+        <h2>Description</h2>
+        <p>The application provides access to university grades on an attractive graphical interface and directly from the windows desktop. The grades, displayed on the official website as raw data, are here displayed and classified by subject as well as information on course leaders, class groups or practical work. The application is inspired by the reference application for high schools: pronote.</p>
+
+        <h2>Technique (front-end)</h2>
+        <p>The Electron framework was used for this project because it allows to create desktop applications with the web languages HTML, CSS, JavaScript. This choice is relevant because it is very easy with these languages to obtain a modern graphical interface and this is the goal of the project.</p>
+
+        <h2>Technique (back-end)</h2>
+        <p>The data on the site is not easily available (there is no API). So I had to use a python script and retrieve the data one by one. To do this, the script simulates the user's actions by making http requests. This proved to be complicated because the official website is generated entirely in javascript and has anti-bot protections. So we had to bypass these restrictions to get the data. </p>
+
+        <h2>Comparison</h2>    
+        <p>You can see the front part of the site and the application. The interface is more modern and well organized</p>
+        <img src="../../data/tomussvsprotomuss.PNG">
+
+        <h2>Limitations</h2>
+        <p>The official website is constantly evolving and since the Covid pandemic many new features for online courses have appeared. These features depend on the university's servers and it is therefore not possible to implement them in the application. </p>
+
+        <div class="bottom-nav">
+            <a href="noisevisualizer.html"><span><-</span> Previous</a>
+            <a href="#top">Back to Top</a>
+            <a href="dice.html">Next <span>-></span></a>
+        </div>
+
+
+
+        <div class="copyright">©Copyright - 2021 - Odet Baptiste</div>
+    </body>
+</html>
+
+    

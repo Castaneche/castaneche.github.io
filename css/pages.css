@@ -123,4 +123,7 @@ img {
     .head > div {
         margin-left: 0;
     }
+    img, video {
+        width: 100%;
+    } 
 }

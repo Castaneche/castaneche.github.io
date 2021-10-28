@@ -66,12 +66,12 @@ nav {
     text-align: right;
 }
 
-nav a {
+nav .item {
     position: relative;
     margin-left: 20px;
     padding: 10px 25px;
 }
-nav a::after {
+nav .item::after {
     content: '';
     position: absolute;
     display: block;
@@ -82,13 +82,29 @@ nav a::after {
     opacity: 0;
     transition: opacity .5s, bottom .4s;
 }
-nav a:hover::after {
+nav .item:hover::after {
     opacity: 1;
     bottom: 10px;
 }
 
-
-
+nav .lang {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    font-size: 16px;
+    font-weight: 200;
+    padding: 10px;
+}
+nav .lang a {
+    padding: 0 5px;
+}
+nav .lang a:hover {
+    text-decoration: underline;
+}
+nav .lang .lang-active {
+    font-weight: 800;
+    color: #5C58FF;
+}
 
 /* Tooltip container */
 .tooltip {
@@ -117,7 +133,32 @@ nav a:hover::after {
 }
 
 @media (max-width: 700px) {
+    body {
+        padding-top: 10px !important;
+    }
     .logo {
-        display: none;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+    .logo h2 {
+        margin-left: auto;
+    }
+    
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 2px solid #c5c5c5;
+        
+    }
+    nav .item {
+        margin: 0;
+        padding: 0;
+    }
+    nav .lang {
+        margin-left: 0;
     }
 }

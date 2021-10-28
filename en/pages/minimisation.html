@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Baptiste Odet</title>
+        <link rel="stylesheet" href="../../css/global.css">
+        <link rel="stylesheet" href="../../css/pages.css">
+        <meta name="viewport" content="width=600">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <nav id="top">
+            <div class="logo">
+                <h1>Baptiste Odet</h1>
+                <h2>Portfolio</h2>
+            </div>
+            <a class="item" href="../index.html">Home</a>
+            <a class="item" href="dice.html"><span><-</span> Previous</a>
+            <a class="item" href="fga.html">Next <span>-></span></a>
+            <div class="lang">
+                <a class="lang-active" href="">EN</a>
+                <a href="../../pages/minimisation.html">FR</a>
+            </div>
+        </nav>
+        
+        <div style="margin-top: 100px" class="head">
+            <h1>Minimisation</h1>
+            <span>Description :</span>
+            <div>
+                <p>Test of the several minimization algorithms applied to the travelling salesman problem. It is even possible to visualize the calculation steps.</p>
+                <div><span class="blackbox">Type</span> Simulation</div>
+                <div><span class="blackbox">Technologies</span> C++</div>
+                <div><span class="blackbox">Librairies</span> ROOT (CERN)</div>
+            </div>
+        </div>
+
+        
+        <h2>Context</h2>
+        <p>During my scientific studies, I worked on numerical analysis : fitting, derivative, minimization, differential equations, analysis... Several projects were proposed and I chose to work on the problem of the travelling salesman which is a recurrent problem in computer science.</p>
+
+        <h2>The project</h2>
+        <p>The goal was to minimise the travel time of a tree of N points placed on a two dimensional space. The points represent the cities that the traveler must cross and the space between the points the distance between the cities. No starting point was imposed, the goal was to test three methods: naive, simulated annealing and genetic. </p>
+
+        <h2>Technique</h2>
+        <p>The ROOT library developed by CERN was imposed in order to get familiar with the tools used by the scientists. The project has been developed in C++ and the display is done with ROOT.</p>
+
+        <h2>Naive method</h2>
+        <p>This method explores all possible paths and keep the shortest one. It allows to find the minimum in all cases but the computation time can become very high when the number of points to be covered increases.</p>
+        <img src="../../data/Minimisation_naive.PNG">
+
+        <h2>Simulated annealing</h2>
+        <p>This method makes the analogy with the cooling of a physical system. When a system is hot, its matter is very agitated and the more it cools the more the agitation decreases towards a minimum of energy. By using this analogy, we try to solve the travelling salesman problem. We start from a random path then we permute the route with a certain probability keeping the shortest path at each step. At the beginning the probability is great so the path is brought to change very strongly then during the time the probability of change decreases and the path is refined until obtaining the shortest path.</p>
+        <p>Cette méthode a bien fonctionné pour notre problème car il est possible d’augmenter le nombre de points à parcourir sans augmenter le temps de calcul de façon exponentiel. Cette méthode est donc bien meilleure que la précédente.</p>
+        <video controls>
+            <source src="../../data/Minimisation_overview.mp4"
+                    type="video/mp4">
+            Sorry, your browser doesn't support embedded videos.
+        </video>
+
+        <h2>Genetic method</h2>
+        <p>This time, the analogy is made using natural selection. We take a population of random paths and apply a series of permutations. We then perform a selection on the starting population by taking the interesting paths, then repeat the procedure. This method did not work as expected and was therefore abandoned because we could only find the minimum for a small number of points to cover.</p>
+
+        <div class="bottom-nav">
+            <a href="dice.html"><span><-</span> Previous</a>
+            <a href="#top">Back to Top</a>
+            <a href="fga.html">Next <span>-></span></a>
+        </div>
+
+        <div class="copyright">©Copyright - 2021 - Odet Baptiste</div>
+    </body>
+</html>
+
+    

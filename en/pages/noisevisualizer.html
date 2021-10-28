@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Baptiste Odet</title>
+        <link rel="stylesheet" href="../../css/global.css">
+        <link rel="stylesheet" href="../../css/pages.css">
+        <meta name="viewport" content="width=600">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <nav id="top">
+            <div class="logo">
+                <h1>Baptiste Odet</h1>
+                <h2>Portfolio</h2>
+            </div>
+            <a class="item" href="../index.html">Home</a>
+            <a class="item" href="fga.html"><span><-</span> Previous</a>
+            <a class="item" href="protomuss.html">Next <span>-></span></a>
+            <div class="lang">
+                <a class="lang-active" href="">EN</a>
+                <a href="../../pages/noisevisualizer.html">FR</a>
+            </div>
+        </nav>
+
+        <video controls>
+            <source src="../../data/NoiseVisualizer_overview.mp4"
+                    type="video/mp4">
+            Sorry, your browser doesn't support embedded videos.
+        </video>
+        
+        <div class="head">
+            <h1>Perlin Noise Visualizer</h1>
+            <span>Description :</span>
+            <div>
+                <p>Software to visualize the effect of the parameters of the Perlin noise algorithm. The noise is generated in 1D 2D and 3D as a graph, texture or terrain..</p>
+                <div><span class="blackbox">Type</span> Software</div>
+                <div><span class="blackbox">Technologies</span> C++</div>
+                <div><span class="blackbox">Librairies</span> OpenGl, Dear ImGui</div>
+                <a class="dl" href="https://github.com/Castaneche/NoiseVisualizer/releases/download/v1.2/NoiseVisualizer_v1.2.zip">Download v1.2</a>
+            </div>
+        </div>
+
+        
+        <h2>Context</h2>
+        <p>With the idea of learning 2D and 3D rendering I wanted to realize a visual project. As the Perlin noise is a very common algorithm but not very well explained, I chose to create a software allowing to play with the parameters in order to visualize the effects.</p>
+
+        <h2>Purpose of the project</h2>
+        <p>The goal of this project is to be able to visualize in several dimensions a coherent noise generation algorithm (here the Perlin noise). The idea is to see the effects of the algorithm's parameters (octaves, frequency, persistence...) in real time and in three different dimensions (graph, texture and terrain).</p>
+
+        <h2>Technique</h2>
+        <p>The software is coded in C++ and uses OpenGl for the graphic rendering. The interface is built with the Dear ImGui library. The project is multithreaded, which means that each action of the user on the algorithm's parameters launches the calculation in parallel. This allows not to block the application during long calculations and also to be able to visualize in real time the modifications.</p>
+
+        <h2>Graph</h2>
+        <p>The noise can be visualized in one dimension on a graph with the time on the horizontal axis and the normalized noise value on the vertical axis. </p>
+        <video autoplay loop>
+            <source src="../../data/NoiseVisualizer_graph.mp4"
+                    type="video/mp4">
+            Sorry, your browser doesn't support embedded videos.
+        </video>
+
+        <h2>Texture</h2>    
+        <p>It is possible to generate a noise texture and to visualize in real time the changes of the algorithm parameters. These textures can be exported as image files to be used in other software.</p>
+        <video autoplay loop>
+            <source src="../../data/NoiseVisualizer_texture.mp4"
+                    type="video/mp4">
+            Sorry, your browser doesn't support embedded videos.
+        </video>
+
+        <h2>Terrain</h2>
+        <p>The generated texture can be visualized in 3D (terrain). The texture is applied on a plane with an amplitude associated to the noise value at each point. The amplitude can be modified in order to obtain larger gradients.</p>
+        <video autoplay loop>
+            <source src="../../data/NoiseVisualizer_terrain1.mp4"
+                    type="video/mp4">
+            Sorry, your browser doesn't support embedded videos.
+        </video>
+
+        
+        <h2>Colormap</h2>
+        <p>An interface allows the user to select a range of colors, and to position each color in order to have the expected texture rendering. This feature (not available in the libraries) was developed especially for this project. Here we have for example a rendering that looks like a bird's eye view. You can see on the left the interface to play with the color settings.</p>
+        <video autoplay loop>
+            <source src="../../data/NoiseVisualizer_texture_color2.mp4"
+                    type="video/mp4">
+            Sorry, your browser doesn't support embedded videos.
+        </video>
+
+        <div class="bottom-nav">
+            <a href="fga.html"><span><-</span> Previous</a>
+            <a href="#top">Back to Top</a>
+            <a href="protomuss.html">Next <span>-></span></a>
+        </div>
+
+        <div class="copyright">©Copyright - 2021 - Odet Baptiste</div>
+    </body>
+
+</html>
+
+    
