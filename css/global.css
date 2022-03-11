@@ -2,6 +2,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+
 html {
     background-color: white;
 }
@@ -47,65 +50,6 @@ ul {
 
 
 
-
-
-nav {
-    font-family: 'Nunito';
-    display: flex;
-    align-items: center;
-}
-.logo {
-    margin-right: 40px;
-}
-.logo h1, .logo h2 {
-    font-weight: 400;
-}
-.logo h2 {
-    font-size: 20px;
-    color: gray;
-    text-align: right;
-}
-
-nav .item {
-    position: relative;
-    margin-left: 20px;
-    padding: 10px 25px;
-}
-nav .item::after {
-    content: '';
-    position: absolute;
-    display: block;
-    width: calc(100% - 45px);
-    height: 5px;
-    bottom: -10px;
-    background-color: #5C58FF;
-    opacity: 0;
-    transition: opacity .5s, bottom .4s;
-}
-nav .item:hover::after {
-    opacity: 1;
-    bottom: 10px;
-}
-
-nav .lang {
-    display: flex;
-    flex-direction: column;
-    margin-left: auto;
-    font-size: 16px;
-    font-weight: 200;
-    padding: 10px;
-}
-nav .lang a {
-    padding: 0 5px;
-}
-nav .lang a:hover {
-    text-decoration: underline;
-}
-nav .lang .lang-active {
-    font-weight: 800;
-    color: #5C58FF;
-}
-
 /* Tooltip container */
 .tooltip {
     position: relative;
@@ -135,30 +79,5 @@ nav .lang .lang-active {
 @media (max-width: 700px) {
     body {
         padding-top: 10px !important;
-    }
-    .logo {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        margin: 0;
-    }
-    .logo h2 {
-        margin-left: auto;
-    }
-    
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        border-bottom: 2px solid #c5c5c5;
-        
-    }
-    nav .item {
-        margin: 0;
-        padding: 0;
-    }
-    nav .lang {
-        margin-left: 0;
     }
 }
