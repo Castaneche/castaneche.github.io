@@ -86,6 +86,22 @@ h1 {
     font-weight: 400;
 }
 
+.additionnal-links {
+    text-align: center;
+    margin-top: 10px;
+}
+.additionnal-links a {
+    font-size: 16px;
+    margin: 0px 10px;
+    padding: 2px 5px;
+    border: 2px solid black;
+    transition: .1s;
+}
+.additionnal-links a:hover {
+    background-color: rgba(0, 0, 0, 0.849);
+    color: white;
+}
+
 h2 {
     font-family: 'Manrope';
     font-weight: 400;
