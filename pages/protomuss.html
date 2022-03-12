@@ -13,27 +13,50 @@
         <link href="https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&display=swap" rel="stylesheet"> 
     </head>
     <body>
-        <nav id="top">
-            <div class="logo">
-                <h1>Baptiste Odet</h1>
-                <h2>Portfolio</h2>
-            </div>
-            <a class="item" href="../index.html">Home</a>
-            <a class="item" href="noisevisualizer.html"><span><-</span> Previous</a>
-            <a class="item"href="dice.html">Next <span>-></span></a>
-            <div class="lang">
-                <a href="../en/pages/protomuss.html">EN</a>
-                <a class="lang-active" href="">FR</a>
+        <div class="lang">
+            <span>selectionner langage - </span>
+            <a href="../en/pages/protomuss.html">EN</a>
+            <a class="lang-active" href="">FR</a>
+        </div>
+        <nav>
+            <h1>Baptiste Odet</h1>
+            <h2>portfolio</h2>
+            <div class="separator"></div>
+            <div class="social">
+                <a href="mailto:baptiste.odet1@gmail.com">
+                    <div class="img-back">
+                        <img src="../data/socials/mail.png">
+                    </div>
+                    <span>mail</span>
+                </a>
+                <a href="https://github.com/Castaneche">
+                    <div class="img-back">
+                        <img src="../data/socials/github.png">
+                    </div>
+                    <span>github</span>
+                </a>
+                <a href="https://www.linkedin.com/in/baptiste-odet-7b1280209/">
+                    <div class="img-back">
+                        <img src="../data/socials/linkedin.png">
+                    </div>
+                    <span>linkedin</span>
+                </a>
             </div>
         </nav>
 
-        <video controls>
-            <source src="../data/ProTomuss_overview.mp4"
-                    type="video/mp4">
-            Sorry, your browser doesn't support embedded videos.
-        </video>
+        <div class="back">
+            <a href="../index.html#projects">< Retour</a>
+        </div>
+        <div id="main">
+            
+            <h1>ProTomuss</h1>
+            <video class="main-video" controls>
+                <source src="../data/ProTomuss_overview.mp4"
+                        type="video/mp4">
+                Sorry, your browser doesn't support embedded videos.
+            </video>
         
-        <div class="head">
+        <!--<div class="head">
             <h1>ProTomuss</h1>
             <span>Description :</span>
             <div>
@@ -41,37 +64,33 @@
                 <div><span class="blackbox">Type</span> Logiciel</div>
                 <div><span class="blackbox">Technologies</span> Electron, NodeJS, HTML, CSS, JavaScript, Python</div>
             </div>
-        </div>
+        </div>-->
 
         
-        <h2>Contexte</h2>
-        <p>Le site officiel permettant de consulter les notes universitaires est peu attirant visuellement. Dans l’idée d’améliorer l’interface et de pouvoir apprendre de nouvelles technologies j’ai décidé de développer une application de bureau permettant de consulter ses notes directement sur windows sans utiliser de navigateur. </p>
+            <h2>Contexte</h2>
+            <p>Le site officiel permettant de consulter les notes universitaires est peu attirant visuellement. Dans l’idée d’améliorer l’interface et de pouvoir apprendre de nouvelles technologies j’ai décidé de développer une application de bureau permettant de consulter ses notes directement sur windows sans utiliser de navigateur. </p>
 
-        <h2>Description</h2>
-        <p>L’application permet d’accéder aux notes universitaires sur une interface graphique attirante et directement depuis le bureau windows. Les notes, affichées brutes sur le site officiel, sont ici affichées et classées par matières ainsi que les informations sur les responsables de cours, les groupes de classe ou encore les travaux pratiques. L’application est inspiré de l’application de référence pour les collèges/lycées : pronote.</p>
+            <h2>Description</h2>
+            <p>L’application permet d’accéder aux notes universitaires sur une interface graphique attirante et directement depuis le bureau windows. Les notes, affichées brutes sur le site officiel, sont ici affichées et classées par matières ainsi que les informations sur les responsables de cours, les groupes de classe ou encore les travaux pratiques. L’application est inspiré de l’application de référence pour les collèges/lycées : pronote.</p>
 
-        <h2>Technique (front-end)</h2>
-        <p>L’environnement Electron a été utilisé pour ce projet car il permet de créer des applications de bureau avec les languages du web HTML, CSS, JavaScript. Ce choix est pertinent car il est très facile avec ces languages d’obtenir une interface graphique moderne et c’est le but du projet.</p>
+            <h2>Technique (front-end)</h2>
+            <p>L’environnement Electron a été utilisé pour ce projet car il permet de créer des applications de bureau avec les languages du web HTML, CSS, JavaScript. Ce choix est pertinent car il est très facile avec ces languages d’obtenir une interface graphique moderne et c’est le but du projet.</p>
 
-        <h2>Technique (back-end)</h2>
-        <p>Les données sur le site ne sont pas disponibles facilement (il n’y a pas d’API). Il a fallu donc utiliser un script python et récupérer les données une par une. Pour cela, le script simule les actions de l’utilisateur en faisant des requêtes http. Cela s’est avéré compliqué car le site officiel est généré entièrement en javascript et possède des protections anti bot. Il a fallu donc contourner ces restrictions pour obtenir les données. </p>
+            <h2>Technique (back-end)</h2>
+            <p>Les données sur le site ne sont pas disponibles facilement (il n’y a pas d’API). Il a fallu donc utiliser un script python et récupérer les données une par une. Pour cela, le script simule les actions de l’utilisateur en faisant des requêtes http. Cela s’est avéré compliqué car le site officiel est généré entièrement en javascript et possède des protections anti bot. Il a fallu donc contourner ces restrictions pour obtenir les données. </p>
 
-        <h2>Comparaison</h2>    
-        <p>On peut voir la partie front du site et celle de l’application. L’interface est plus moderne et mieux organisée.</p>
-        <img src="../data/tomussvsprotomuss.PNG">
+            <h2>Comparaison</h2>    
+            <p>On peut voir la partie front du site et celle de l’application. L’interface est plus moderne et mieux organisée.</p>
+            <img src="../data/tomussvsprotomuss.PNG">
 
-        <h2>Limitations</h2>
-        <p>Le site officiel est en constante évolution et depuis la pandémie de Covid beaucoup de nouvelles fonctionnalités pour les cours en lignes sont apparues. Ces fonctionnalitées dépendent des serveurs de l’université et il n’est donc pas possible de les implémenter dans l’application. Cette application est donc obsolète à ce jour.</p>
+            <h2>Limitations</h2>
+            <p>Le site officiel est en constante évolution et depuis la pandémie de Covid beaucoup de nouvelles fonctionnalités pour les cours en lignes sont apparues. Ces fonctionnalitées dépendent des serveurs de l’université et il n’est donc pas possible de les implémenter dans l’application. Cette application est donc obsolète à ce jour.</p>
 
-        <div class="bottom-nav">
-            <a href="noisevisualizer.html"><span><-</span> Previous</a>
-            <a href="#top">Back to Top</a>
-            <a href="dice.html">Next <span>-></span></a>
+
         </div>
 
 
-
-        <div class="copyright">©Copyright - 2021 - Odet Baptiste</div>
+        <div class="copyright">©Copyright - 2022 - Odet Baptiste</div>
     </body>
 </html>
 

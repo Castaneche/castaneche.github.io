@@ -13,88 +13,106 @@
         <link href="https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&display=swap" rel="stylesheet"> 
     </head>
     <body>
-        <nav id="top">
-            <div class="logo">
-                <h1>Baptiste Odet</h1>
-                <h2>Portfolio</h2>
-            </div>
-            <a class="item" href="../index.html">Home</a>
-            <a class="item" href="fga.html"><span><-</span> Previous</a>
-            <a class="item" href="protomuss.html">Next <span>-></span></a>
-            <div class="lang">
-                <a href="../en/pages/noisevisualizer.html">EN</a>
-                <a class="lang-active" href="">FR</a>
+        <div class="lang">
+            <span>selectionner langage - </span>
+            <a href="../en/pages/noisevisualizer.html">EN</a>
+            <a class="lang-active" href="">FR</a>
+        </div>
+        <nav>
+            <h1>Baptiste Odet</h1>
+            <h2>portfolio</h2>
+            <div class="separator"></div>
+            <div class="social">
+                <a href="mailto:baptiste.odet1@gmail.com">
+                    <div class="img-back">
+                        <img src="../data/socials/mail.png">
+                    </div>
+                    <span>mail</span>
+                </a>
+                <a href="https://github.com/Castaneche">
+                    <div class="img-back">
+                        <img src="../data/socials/github.png">
+                    </div>
+                    <span>github</span>
+                </a>
+                <a href="https://www.linkedin.com/in/baptiste-odet-7b1280209/">
+                    <div class="img-back">
+                        <img src="../data/socials/linkedin.png">
+                    </div>
+                    <span>linkedin</span>
+                </a>
             </div>
         </nav>
 
-        <video controls>
-            <source src="../data/NoiseVisualizer_overview.mp4"
-                    type="video/mp4">
-            Sorry, your browser doesn't support embedded videos.
-        </video>
-        
-        <div class="head">
+        <div class="back">
+            <a href="../index.html#projects">< Retour</a>
+        </div>
+        <div id="main">
+            
             <h1>Perlin Noise Visualizer</h1>
-            <span>Description :</span>
-            <div>
-                <p>Logiciel permettant de visualiser en temps réel le bruit de Perlin. Le bruit est généré en 1D 2D et 3D sous forme de graphique, texture ou terrain.</p>
-                <div><span class="blackbox">Type</span> Software</div>
-                <div><span class="blackbox">Technologies</span> C++</div>
-                <div><span class="blackbox">Librairies</span> OpenGl, Dear ImGui</div>
-                <a class="dl" href="https://github.com/Castaneche/NoiseVisualizer/releases/download/v1.2/NoiseVisualizer_v1.2.zip">Download v1.2</a>
-            </div>
+            <video class="main-video" controls>
+                <source src="../data/NoiseVisualizer_overview.mp4"
+                        type="video/mp4">
+                Sorry, your browser doesn't support embedded videos.
+            </video>
+        
+            <!--<div class="head">
+                <h1>Perlin Noise Visualizer</h1>
+                <span>Description :</span>
+                <div>
+                    <p>Logiciel permettant de visualiser en temps réel le bruit de Perlin. Le bruit est généré en 1D 2D et 3D sous forme de graphique, texture ou terrain.</p>
+                    <div><span class="blackbox">Type</span> Software</div>
+                    <div><span class="blackbox">Technologies</span> C++</div>
+                    <div><span class="blackbox">Librairies</span> OpenGl, Dear ImGui</div>
+                    <a class="dl" href="https://github.com/Castaneche/NoiseVisualizer/releases/download/v1.2/NoiseVisualizer_v1.2.zip">Download v1.2</a>
+                </div>
+            </div>-->
+
+            
+            <h2>Contexte</h2>
+            <p>Dans l’idée d’apprendre le rendu 2D et 3D j’ai souhaité réaliser un projet visuel. Comme le bruit de Perlin est un algorithme très répandu mais peu expliqué j’ai donc choisi de réaliser un logiciel permettant de jouer avec les paramètres afin de visualiser les effets.</p>
+
+            <h2>But du projet</h2>
+            <p>Le but de ce projet est de pouvoir visualiser en plusieurs dimensions un algorithme de génération de bruit cohérent (ici le bruit de Perlin). L’idée est de voir les effets des paramètres de l’algorithme (octaves, fréquence, persistance...) en temps réel et dans trois différentes dimensions (graphique, texture et terrain).</p>
+
+            <h2>Technique</h2>
+            <p>Le logiciel est codé en C++ et utilise OpenGl pour le rendu graphique. L’interface est construite grâce à la librairie Dear ImGui. Le projet est multithread c’est à dire que chaque action de l’utilisateur sur les paramètres de l’algorithme lance le calcul en parallèle. Cela permet de ne pas bloquer l’application lors de long calculs et aussi de pouvoir visualiser en temps réel les modifications.</p>
+
+            <h2>Graphique</h2>
+            <p>Le bruit peut être visualisé en une dimension sur un graphique avec en abscisse l’incrément et en ordonnée la valeur du bruit normalisée. </p>
+            <video autoplay loop muted>
+                <source src="../data/NoiseVisualizer_graph.mp4"
+                        type="video/mp4">
+                Sorry, your browser doesn't support embedded videos.
+            </video>
+
+            <h2>Texture</h2>    
+            <p>Il est possible de générer une texture de bruit et de visualiser en temps réel les changements de paramètres de l’algorithme. Ces textures peuvent être exportées en fichier image pour être utilisées dans d’autres logiciels.</p>
+            <video autoplay loop muted>
+                <source src="../data/NoiseVisualizer_texture.mp4"
+                        type="video/mp4">
+                Sorry, your browser doesn't support embedded videos.
+            </video>
+
+            <h2>Terrain</h2>
+            <p>La texture générée peut être visualisée en 3D (terrain). La texture est appliquée sur un plan avec en chaque point une amplitude liée à la valeur du bruit. L’amplitude peut être modifiée afin d’obtenir de plus grands dénivelés.</p>
+            <video autoplay loop muted>
+                <source src="../data/NoiseVisualizer_terrain1.mp4"
+                        type="video/mp4">
+                Sorry, your browser doesn't support embedded videos.
+            </video>
+
+            
+            <h2>Colormap</h2>
+            <p>Une interface permet à l’utilisateur de sélectionner une gamme de couleurs, et de positionner chaque couleur afin d’avoir le rendu de texture attendu. Cette fonctionnalité (non disponible dans les librairies) a été dévelopée spécialement pour ce projet. Ici, on a par exemple un rendu faisant penser à une vue aérienne. On peut voir à gauche l’interface permettant de jouer sur les paramètres de couleur.</p>
+            <video autoplay loop muted>
+                <source src="../data/NoiseVisualizer_texture_color2.mp4"
+                        type="video/mp4">
+                Sorry, your browser doesn't support embedded videos.
+            </video>
         </div>
 
-        
-        <h2>Contexte</h2>
-        <p>Dans l’idée d’apprendre le rendu 2D et 3D j’ai souhaité réaliser un projet visuel. Comme le bruit de Perlin est un algorithme très répandu mais peu expliqué j’ai donc choisi de réaliser un logiciel permettant de jouer avec les paramètres afin de visualiser les effets.</p>
-
-        <h2>But du projet</h2>
-        <p>Le but de ce projet est de pouvoir visualiser en plusieurs dimensions un algorithme de génération de bruit cohérent (ici le bruit de Perlin). L’idée est de voir les effets des paramètres de l’algorithme (octaves, fréquence, persistance...) en temps réel et dans trois différentes dimensions (graphique, texture et terrain).</p>
-
-        <h2>Technique</h2>
-        <p>Le logiciel est codé en C++ et utilise OpenGl pour le rendu graphique. L’interface est construite grâce à la librairie Dear ImGui. Le projet est multithread c’est à dire que chaque action de l’utilisateur sur les paramètres de l’algorithme lance le calcul en parallèle. Cela permet de ne pas bloquer l’application lors de long calculs et aussi de pouvoir visualiser en temps réel les modifications.</p>
-
-        <h2>Graphique</h2>
-        <p>Le bruit peut être visualisé en une dimension sur un graphique avec en abscisse l’incrément et en ordonnée la valeur du bruit normalisée. </p>
-        <video autoplay loop muted>
-            <source src="../data/NoiseVisualizer_graph.mp4"
-                    type="video/mp4">
-            Sorry, your browser doesn't support embedded videos.
-        </video>
-
-        <h2>Texture</h2>    
-        <p>Il est possible de générer une texture de bruit et de visualiser en temps réel les changements de paramètres de l’algorithme. Ces textures peuvent être exportées en fichier image pour être utilisées dans d’autres logiciels.</p>
-        <video autoplay loop muted>
-            <source src="../data/NoiseVisualizer_texture.mp4"
-                    type="video/mp4">
-            Sorry, your browser doesn't support embedded videos.
-        </video>
-
-        <h2>Terrain</h2>
-        <p>La texture générée peut être visualisée en 3D (terrain). La texture est appliquée sur un plan avec en chaque point une amplitude liée à la valeur du bruit. L’amplitude peut être modifiée afin d’obtenir de plus grands dénivelés.</p>
-        <video autoplay loop muted>
-            <source src="../data/NoiseVisualizer_terrain1.mp4"
-                    type="video/mp4">
-            Sorry, your browser doesn't support embedded videos.
-        </video>
-
-        
-        <h2>Colormap</h2>
-        <p>Une interface permet à l’utilisateur de sélectionner une gamme de couleurs, et de positionner chaque couleur afin d’avoir le rendu de texture attendu. Cette fonctionnalité (non disponible dans les librairies) a été dévelopée spécialement pour ce projet. Ici, on a par exemple un rendu faisant penser à une vue aérienne. On peut voir à gauche l’interface permettant de jouer sur les paramètres de couleur.</p>
-        <video autoplay loop muted>
-            <source src="../data/NoiseVisualizer_texture_color2.mp4"
-                    type="video/mp4">
-            Sorry, your browser doesn't support embedded videos.
-        </video>
-
-        <div class="bottom-nav">
-            <a href="fga.html"><span><-</span> Previous</a>
-            <a href="#top">Back to Top</a>
-            <a href="protomuss.html">Next <span>-></span></a>
-        </div>
-
-        <div class="copyright">©Copyright - 2021 - Odet Baptiste</div>
+        <div class="copyright">©Copyright - 2022 - Odet Baptiste</div>
     </body>
 
 </html>

@@ -13,6 +13,11 @@
         <link href="https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&display=swap" rel="stylesheet"> 
     </head>
     <body>
+        <div class="lang">
+            <span>selectionner langage - </span>
+            <a href="en/index.html">EN</a>
+            <a class="lang-active" href="index.html">FR</a>
+        </div>
         <nav>
             <h1>Baptiste Odet</h1>
             <h2>portfolio</h2>
@@ -37,20 +42,17 @@
                     <span>linkedin</span>
                 </a>
             </div>
-            <div style="display: none;" class="lang">
-                <a href="en/index.html">EN</a>
-                <a class="lang-active" href="index.html">FR</a>
-            </div>
         </nav>
 
         <div id="main">
         <div class="side">
             <div id="about">
                 <div class="section-title">
-                    <h2>about - </h2>
+                    <h2>à propos - </h2>
                 </div>
                 <div class="about-content">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet rhoncus ligula, sed consequat felis. In elementum pretium nunc sed condimentum. Donec nec aliquam nisi. Curabitur pulvinar tortor erat, et porttitor nisl egestas quis. Aenean blandit malesuada diam nec mattis. Vestibulum molestie, orci eget luctus molestie, turpis justo vestibulum mi, at molestie mauris mauris eu arcu. Phasellus porta porta rutrum. 
+                    Etudiant en Master de Physique et autodidacte en développement informatique. Je produit des logiciels, simulations et visualisations souvent proches du domaine scientifique.
+                    Spécialisé dans le language C++, je code aussi en Python, HTML, CSS, JavaScript...
                 </div>
             </div>
 
@@ -62,7 +64,7 @@
                 <div class="articles-content">
                     <a href="" class="article">
                         <span class="date">11 mars 2022</span>
-                        <span class="title">No article for the moment</span>
+                        <span class="title">Pas d'articles pour le moment</span>
                     </a>
                 </div>
             </div>
@@ -71,19 +73,19 @@
 
         <div id="projects">
             <div id="projects-bar" class="section-title">
-                <h2>projects - </h2>
-                <a id="allprojects" class="selectable selected">All</a>
-                <a id="mainprojects" class="selectable text-accent1">Main projects</a>
-                <a id="univprojects" class="selectable text-accent2">Academic projects</a>
-                <a id="sideprojects" class="selectable text-accent3">Side projects</a>
+                <h2>projets - </h2>
+                <a id="allprojects" class="selectable selected">Tous</a>
+                <a id="mainprojects" class="selectable text-accent1">Principaux</a>
+                <a id="univprojects" class="selectable text-accent2">Universitaires</a>
+                <a id="sideprojects" class="selectable text-accent3">Petits projets</a>
             </div>
             <div class="container">
-            <a id="fga" href="pages/fga.html" class="card">
+            <a id="fga" href="https://fga-software.xyz" class="card">
                 <div class="project-img">
                     <img src="data/thumbnail-fga.PNG">
                     <div class="projects-btn">
                         <div class="borders"></div>
-                        <span>go to website -></span>
+                        <span>voir le site -></span>
                     </div>
                 </div>
                 <div class="underimg">
@@ -99,7 +101,7 @@
                     <img src="data/thumbnail-ns.PNG">
                     <div class="projects-btn">
                         <div class="borders"></div>
-                        <span>see details -></span>
+                        <span>voir les details -></span>
                     </div>
                 </div>
                 
@@ -116,7 +118,7 @@
                     <img src="data/thumbnail-pt.PNG">
                     <div class="projects-btn">
                         <div class="borders"></div>
-                        <span>see details -></span>
+                        <span>voir les details -></span>
                     </div>
                 </div>
                 <div class="underimg">
@@ -132,14 +134,14 @@
                     <img src="data/thumbnail-d.PNG">
                     <div class="projects-btn">
                         <div class="borders"></div>
-                        <span>see details -></span>
+                        <span>voir les details -></span>
                     </div>
                 </div>
                 <div class="underimg">
                     <span>Script</span>
                     <span class="languages">Python, OpenCV</span>
                 </div>
-                <span class="title">Realtime Dice Detection</span> 
+                <span class="title">Détection Dés temps réel</span> 
                 <p>Script qui se connecte à une caméra afin de détecter en temps réel les valeurs affichées sur les faces de dés.</p>
             </a>
 
@@ -148,7 +150,7 @@
                     <img src="data/thumbnail-minim.PNG">
                     <div class="projects-btn">
                         <div class="borders"></div>
-                        <span>see details -></span>
+                        <span>voir les details -></span>
                     </div>
                 </div>
                 <div class="underimg">
@@ -163,7 +165,7 @@
         </div>
 
 
-        <div class="copyright">©Copyright - 2021 - Odet Baptiste</div>
+        <div class="copyright">©Copyright - 2022 - Odet Baptiste</div>
     </body>
 
     <script src="index.js"></script>

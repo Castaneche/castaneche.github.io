@@ -13,79 +13,9 @@ body {
     margin: auto;
     max-width: 900px;
     font-size: 18px;
-    padding: 50px 0;
+    padding: 10px 0;
     font-family: 'Manrope';
     font-weight: 400;
-}
-
-nav {
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    width: 100%;
-    font-family: "Manrope";
-    font-weight: 400;
-}
-nav h1 {
-    font-weight: 500;
-    font-size: 28px;
-    position: absolute;
-    top: 20px;
-}
-nav h2{
-    font-weight: 500;
-    font-size: 18px;
-}
-nav .separator {
-    width: 100%;
-    border-bottom: black 3px solid;
-    margin: 0 0 5px 15px ;
-}
-.social {
-    margin-left: auto;
-    display: flex;
-}
-.social a {
-    position: relative;
-    padding: 10px 15px 0 15px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.social img {
-    width: 28px;
-}
-.social .img-back {
-    position: relative;
-    width: 28px;
-    height: 28px;
-    padding: 8px;
-    margin-bottom: 5px;
-}
-.social .img-back::after {
-    position: absolute;
-    content: '';
-    top: 0px;
-    left: 0px;
-    z-index: 5;
-    width: 28px;
-    height: 28px;
-    padding: 8px;
-    margin: 0;
-    border: 1px solid black;
-    border-radius: 100%;    
-    transform-origin: 50%;
-    transition: .2s;
-}
-.social a:hover .img-back::after {
-   scale: 1.2;
-}
-.social span {
-    display: block;
-    font-size: 12px;
-    font-weight: 600;
-    margin-top: 5px;
 }
 
 

@@ -13,45 +13,80 @@
         <link href="https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&display=swap" rel="stylesheet"> 
     </head>
     <body>
-        <nav class="header">
-            <div class="logo">
-                <h1>Baptiste Odet</h1>
-                <h2>Portfolio</h2>
-            </div>
-            <a class="item" href="#about">About</a>
-            <a class="item" href="#work">Work</a>
-            <a class="item" href="#contact">Contact</a>
-            <div class="lang">
-                <a class="lang-active" href="index.html">EN</a>
-                <a href="../index.html">FR</a>
+        <div class="lang">
+            <span>select language - </span>
+            <a class="lang-active" href="index.html">EN</a>
+            <a href="../index.html">FR</a>
+        </div>
+        <nav>
+            <h1>Baptiste Odet</h1>
+            <h2>portfolio</h2>
+            <div class="separator"></div>
+            <div class="social">
+                <a href="mailto:baptiste.odet1@gmail.com">
+                    <div class="img-back">
+                        <img src="../data/socials/mail.png">
+                    </div>
+                    <span>mail</span>
+                </a>
+                <a href="https://github.com/Castaneche">
+                    <div class="img-back">
+                        <img src="../data/socials/github.png">
+                    </div>
+                    <span>github</span>
+                </a>
+                <a href="https://www.linkedin.com/in/baptiste-odet-7b1280209/">
+                    <div class="img-back">
+                        <img src="../data/socials/linkedin.png">
+                    </div>
+                    <span>linkedin</span>
+                </a>
             </div>
         </nav>
-        
-        <img class="welcomeimg" src="../data/welcome.png">
 
-        <div class="content">
-            <h2 id="about" class="section-title">About</h2>
-            <div class="section about">
-                <div class="left">
-                    <div class="face">
-                        <img class="profil" src="../data/profil.jpg">
-                        <div>
-                            <span class="name">Baptiste Odet</span>
-                        </div>
+        <div id="main">
+            <div class="side">
+                <div id="about">
+                    <div class="section-title">
+                        <h2>about - </h2>
                     </div>
-                    <p>Passionate about computer science, I learned software development online and in books. With a degree in physics, I like to combine science and computer science in my projects. I am interested in software, scientific visualization, image processing, web and many other fields.  </p>
+                    <div class="about-content">
+                        Student in Master of Physics and self-taught in computer development. I produce software, simulations and visualizations often close to the scientific field. Specialized in the C++ language, I also code in Python, HTML, CSS, JavaScript...
+                    </div>
                 </div>
-                <div class="right">
-                    <p>Specialized in C++, I like the flexibility and power of this language. I also work with other languages such as Python, HTML, CSS, JS, etc...</p>
-                    <p>I pay a lot of attention to the design of my projects because it is the first impression the user has of the product.</p>
-                    <p>I like to push the limits of the technologies I use and design innovative software.</p>
+    
+                <div id="articles">
+                    <div  class="section-title">
+                        <h2>articles - </h2>
+                        <a class="selectable selected">2022</a>
+                    </div>
+                    <div class="articles-content">
+                        <a href="" class="article">
+                            <span class="date">11 mars 2022</span>
+                            <span class="title">No article for the moment</span>
+                        </a>
+                    </div>
                 </div>
             </div>
-
-            <h2 id="work" class="section-title">Work</h2>
-            <div class="section work">
-                <a href="pages/fga.html" class="card">
-                    <img src="../data/thumbnail-fga.PNG">
+    
+    
+            <div id="projects">
+                <div id="projects-bar" class="section-title">
+                    <h2>projects - </h2>
+                    <a id="allprojects" class="selectable selected">All</a>
+                    <a id="mainprojects" class="selectable text-accent1">Main projects</a>
+                    <a id="univprojects" class="selectable text-accent2">Academic projects</a>
+                    <a id="sideprojects" class="selectable text-accent3">Side projects</a>
+                </div>
+                <div class="container">
+                <a id="fga" href="https://fga-software.xyz" class="card">
+                    <div class="project-img">
+                        <img src="../data/thumbnail-fga.PNG">
+                        <div class="projects-btn">
+                            <div class="borders"></div>
+                            <span>go to website -></span>
+                        </div>
+                    </div>
                     <div class="underimg">
                         <span>Logiciel</span>
                         <span class="languages">C++, OpenGl, ImGui</span>
@@ -59,9 +94,16 @@
                     <span class="title">FGA - Fast Graphing & Analysis Software</span> 
                     <p>Data analysis software. It allows you to display data with curves and to perform operations such as fitting, derivative, integral, Fourier transform, etc... </p>
                     </a>
-
-                <a href="pages/noisevisualizer.html" class="card">
-                    <img src="../data/thumbnail-ns.PNG">
+    
+                <a id="ns" href="pages/noisevisualizer.html" class="card">
+                    <div class="project-img">
+                        <img src="../data/thumbnail-ns.PNG">
+                        <div class="projects-btn">
+                            <div class="borders"></div>
+                            <span>see details -></span>
+                        </div>
+                    </div>
+                    
                     <div class="underimg">
                         <span>Simulation</span>
                         <span class="languages">C++, OpenGl, ImGui</span>
@@ -69,9 +111,15 @@
                     <span class="title">Perlin Noise Visualizer</span> 
                     <p>Software to visualize the effect of the parameters of the Perlin noise algorithm. The noise is generated in 1D 2D and 3D as a graph, texture or terrain.</p>
                 </a>
-
-                <a href="pages/protomuss.html" class="card">
-                    <img src="../data/thumbnail-pt.PNG">
+    
+                <a id="pt" href="pages/protomuss.html" class="card">
+                    <div class="project-img">
+                        <img src="../data/thumbnail-pt.PNG">
+                        <div class="projects-btn">
+                            <div class="borders"></div>
+                            <span>see details -></span>
+                        </div>
+                    </div>
                     <div class="underimg">
                         <span>Logiciel</span>
                         <span class="languages">HTML, CSS, JS</span>
@@ -80,8 +128,14 @@
                     <p>Software for the students of Lyon 1. It allows you to connect to the university grades site and to display the data in a more organized and attractive way than the official site.</p>
                 </a>
                 
-                <a href="pages/dice.html" class="card">
-                    <img src="../data/thumbnail-d.PNG">
+                <a id="dice" href="pages/dice.html" class="card">
+                    <div class="project-img">
+                        <img src="../data/thumbnail-d.PNG">
+                        <div class="projects-btn">
+                            <div class="borders"></div>
+                            <span>see details -></span>
+                        </div>
+                    </div>
                     <div class="underimg">
                         <span>Script</span>
                         <span class="languages">Python, OpenCV</span>
@@ -89,9 +143,15 @@
                     <span class="title">Realtime Dice Detection</span> 
                     <p>Script that connects to a camera to detect in real time the values displayed on the faces of dice.</p>
                 </a>
-
-                <a href="pages/minimisation.html" class="card">
-                    <img src="../data/thumbnail-minim.PNG">
+    
+                <a id="minim" href="pages/minimisation.html" class="card">
+                    <div class="project-img">
+                        <img src="../data/thumbnail-minim.PNG">
+                        <div class="projects-btn">
+                            <div class="borders"></div>
+                            <span>see details -></span>
+                        </div>
+                    </div>
                     <div class="underimg">
                         <span>Simulation</span>
                         <span class="languages">C++, ROOT(CERN)</span>
@@ -99,27 +159,13 @@
                     <span class="title">Minimisation</span>
                     <p>Test of the several minimization algorithms applied to the travelling salesman problem. It is even possible to visualize the calculation steps.</p>
                 </a>
+                </div>
             </div>
-        
-            <h2 id="contact" class="section-title">Contact</h2>
-            <div class="section contact">
-                <ul>
-                    <li><a href="mailto:baptiste.odet1@gmail.com"><img src="../data/icons/enveloppe32x32.png"> baptiste.odet1@gmail.com</a></li>
-                    <li><a href="https://github.com/Castaneche"><img src="../data/icons/github32x32.png"> castaneche</a></li>
-                    <li><a href="https://www.linkedin.com/in/baptiste-odet-7b1280209"><img src="../data/icons/linkedin32x32.png"> baptiste-odet-7b1280209</a></li>
-                </ul>
-            </div>
-        
         </div>
         
 
 
-        <div class="copyright">©Copyright - 2021 - Odet Baptiste</div>
-
-        <div class="copyright-icons">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a>, 
-            <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a>,
-            <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a>
-            from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        <div class="copyright">©Copyright - 2022 - Odet Baptiste</div>
     </body>
 </html>
 

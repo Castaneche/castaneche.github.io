@@ -13,27 +13,50 @@
         <link href="https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&display=swap" rel="stylesheet"> 
     </head>
     <body>
-        <nav id="top">
-            <div class="logo">
-                <h1>Baptiste Odet</h1>
-                <h2>Portfolio</h2>
-            </div>
-            <a class="item" href="../index.html">Home</a>
-            <a class="item" href="fga.html"><span><-</span> Previous</a>
-            <a class="item" href="protomuss.html">Next <span>-></span></a>
-            <div class="lang">
-                <a class="lang-active" href="">EN</a>
-                <a href="../../pages/noisevisualizer.html">FR</a>
+        <div class="lang">
+            <span>select language - </span>
+            <a class="lang-active"href="">EN</a>
+            <a href="../../pages/noisevisualizer.html">FR</a>
+        </div>
+        <nav>
+            <h1>Baptiste Odet</h1>
+            <h2>portfolio</h2>
+            <div class="separator"></div>
+            <div class="social">
+                <a href="mailto:baptiste.odet1@gmail.com">
+                    <div class="img-back">
+                        <img src="../../data/socials/mail.png">
+                    </div>
+                    <span>mail</span>
+                </a>
+                <a href="https://github.com/Castaneche">
+                    <div class="img-back">
+                        <img src="../../data/socials/github.png">
+                    </div>
+                    <span>github</span>
+                </a>
+                <a href="https://www.linkedin.com/in/baptiste-odet-7b1280209/">
+                    <div class="img-back">
+                        <img src="../../data/socials/linkedin.png">
+                    </div>
+                    <span>linkedin</span>
+                </a>
             </div>
         </nav>
 
-        <video controls>
-            <source src="../../data/NoiseVisualizer_overview.mp4"
-                    type="video/mp4">
-            Sorry, your browser doesn't support embedded videos.
-        </video>
+        <div class="back">
+            <a href="../index.html#projects">< Back to home</a>
+        </div>
+        <div id="main">
+            
+            <h1>Perlin Noise Visualizer</h1>
+            <video class="main-video" controls>
+                <source src="../../data/NoiseVisualizer_overview.mp4"
+                        type="video/mp4">
+                Sorry, your browser doesn't support embedded videos.
+            </video>
         
-        <div class="head">
+        <!--<div class="head">
             <h1>Perlin Noise Visualizer</h1>
             <span>Description :</span>
             <div>
@@ -43,7 +66,7 @@
                 <div><span class="blackbox">Librairies</span> OpenGl, Dear ImGui</div>
                 <a class="dl" href="https://github.com/Castaneche/NoiseVisualizer/releases/download/v1.2/NoiseVisualizer_v1.2.zip">Download v1.2</a>
             </div>
-        </div>
+        </div>-->
 
         
         <h2>Context</h2>
@@ -88,13 +111,9 @@
             Sorry, your browser doesn't support embedded videos.
         </video>
 
-        <div class="bottom-nav">
-            <a href="fga.html"><span><-</span> Previous</a>
-            <a href="#top">Back to Top</a>
-            <a href="protomuss.html">Next <span>-></span></a>
-        </div>
+    </div>
 
-        <div class="copyright">©Copyright - 2021 - Odet Baptiste</div>
+        <div class="copyright">©Copyright - 2022 - Odet Baptiste</div>
     </body>
 
 </html>

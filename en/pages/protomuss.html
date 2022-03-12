@@ -13,27 +13,50 @@
         <link href="https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&display=swap" rel="stylesheet"> 
     </head>
     <body>
-        <nav id="top">
-            <div class="logo">
-                <h1>Baptiste Odet</h1>
-                <h2>Portfolio</h2>
-            </div>
-            <a class="item" href="../index.html">Home</a>
-            <a class="item" href="noisevisualizer.html"><span><-</span> Previous</a>
-            <a class="item" href="dice.html">Next <span>-></span></a>
-            <div class="lang">
-                <a class="lang-active" href="">EN</a>
-                <a href="../../pages/protomuss.html">FR</a>
+        <div class="lang">
+            <span>select language - </span>
+            <a class="lang-active"href="">EN</a>
+            <a href="../../pages/protomuss.html">FR</a>
+        </div>
+        <nav>
+            <h1>Baptiste Odet</h1>
+            <h2>portfolio</h2>
+            <div class="separator"></div>
+            <div class="social">
+                <a href="mailto:baptiste.odet1@gmail.com">
+                    <div class="img-back">
+                        <img src="../../data/socials/mail.png">
+                    </div>
+                    <span>mail</span>
+                </a>
+                <a href="https://github.com/Castaneche">
+                    <div class="img-back">
+                        <img src="../../data/socials/github.png">
+                    </div>
+                    <span>github</span>
+                </a>
+                <a href="https://www.linkedin.com/in/baptiste-odet-7b1280209/">
+                    <div class="img-back">
+                        <img src="../../data/socials/linkedin.png">
+                    </div>
+                    <span>linkedin</span>
+                </a>
             </div>
         </nav>
 
-        <video controls>
-            <source src="../../data/ProTomuss_overview.mp4"
-                    type="video/mp4">
-            Sorry, your browser doesn't support embedded videos.
-        </video>
-        
-        <div class="head">
+        <div class="back">
+            <a href="../index.html#projects">< Back to home</a>
+        </div>
+        <div id="main">
+            
+            <h1>ProTomuss</h1>
+            <video class="main-video" controls>
+                <source src="../../data/ProTomuss_overview.mp4"
+                        type="video/mp4">
+                Sorry, your browser doesn't support embedded videos.
+            </video>
+
+        <!--<div class="head">
             <h1>ProTomuss</h1>
             <span>Description :</span>
             <div>
@@ -41,7 +64,7 @@
                 <div><span class="blackbox">Type</span> Logiciel</div>
                 <div><span class="blackbox">Technologies</span> Electron, NodeJS, HTML, CSS, JavaScript, Python</div>
             </div>
-        </div>
+        </div>-->
 
         
         <h2>Context</h2>
@@ -63,15 +86,11 @@
         <h2>Limitations</h2>
         <p>The official website is constantly evolving and since the Covid pandemic many new features for online courses have appeared. These features depend on the university's servers and it is therefore not possible to implement them in the application. </p>
 
-        <div class="bottom-nav">
-            <a href="noisevisualizer.html"><span><-</span> Previous</a>
-            <a href="#top">Back to Top</a>
-            <a href="dice.html">Next <span>-></span></a>
-        </div>
+    </div>
 
 
 
-        <div class="copyright">©Copyright - 2021 - Odet Baptiste</div>
+        <div class="copyright">©Copyright - 2022 - Odet Baptiste</div>
     </body>
 </html>
 
