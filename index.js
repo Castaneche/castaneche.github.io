@@ -1,13 +1,12 @@
 all = [
-    'fga', 'ns', 'pt', 'dice', 'minim'
+    'fga', 'ns', 'mol', 'dice', 
 ]
 main = [
     'fga', 'ns'
 ]
 univ = [
-    'pt', 'dice', 'minim'
+    'mol', 'dice',
 ]
-side = []
 
 function update_projects(arr, newLink) {
     //Update links
@@ -30,4 +29,3 @@ function update_projects(arr, newLink) {
 document.getElementById("allprojects").addEventListener("click", function() {update_projects(all, 'allprojects')});
 document.getElementById("mainprojects").addEventListener("click", function() {update_projects(main, 'mainprojects')});
 document.getElementById("univprojects").addEventListener("click", function() {update_projects(univ, 'univprojects')});
-document.getElementById("sideprojects").addEventListener("click", function() {update_projects(side, 'sideprojects')}); 

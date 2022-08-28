@@ -50,9 +50,10 @@ ul {
 
 
 nav {
+    margin-top: 50px;
     position: relative;
     display: flex;
-    align-items: flex-end;
+    justify-content: center;
     width: 100%;
     font-family: "Manrope";
     font-weight: 400;
@@ -126,12 +127,15 @@ nav .separator {
     margin-right: 15px;
     margin-bottom: 10px;
     font-size: 16px;
+    color: #c5c5c5;
 }
 .lang a {
     margin-left: 5px;
+    color: #c5c5c5;
 }
 .lang-active {
     font-weight: 700;
+    color: #c5c5c5;
 }
 
 

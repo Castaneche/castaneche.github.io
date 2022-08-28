@@ -5,7 +5,7 @@
         <title>Baptiste Odet</title>
         <link rel="stylesheet" href="css/global.css">
         <link rel="stylesheet" href="css/index.css">
-        <meta name="viewport" content="width=700">
+        <meta name="viewport" content="width=500">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +21,25 @@
         <nav>
             <h1>Baptiste Odet</h1>
             <h2>portfolio</h2>
-            <div class="separator"></div>
+            
+        </nav>
+
+        <div id="main">
+        <div class="side">
+            
+            <div id="about">
+                <div class="section-title">
+                    <h2>à propos - </h2>
+                </div>
+                <div class="about-content">
+                    Etudiant en Master de Physique et autodidacte en développement informatique. Je produit des logiciels, simulations et visualisations souvent proches du domaine scientifique.
+                    Spécialisé dans le language C++, je code aussi en Python, HTML, CSS, JavaScript...
+                </div>
+            </div>
+
+            <div class="section-title">
+                <h2>liens - </h2>
+            </div>
             <div class="social">
                 <a href="mailto:baptiste.odet1@gmail.com">
                     <div class="img-back">
@@ -41,19 +59,6 @@
                     </div>
                     <span>linkedin</span>
                 </a>
-            </div>
-        </nav>
-
-        <div id="main">
-        <div class="side">
-            <div id="about">
-                <div class="section-title">
-                    <h2>à propos - </h2>
-                </div>
-                <div class="about-content">
-                    Etudiant en Master de Physique et autodidacte en développement informatique. Je produit des logiciels, simulations et visualisations souvent proches du domaine scientifique.
-                    Spécialisé dans le language C++, je code aussi en Python, HTML, CSS, JavaScript...
-                </div>
             </div>
 
             <div id="articles">
@@ -77,12 +82,11 @@
                 <a id="allprojects" class="selectable selected">Tous</a>
                 <a id="mainprojects" class="selectable text-accent1">Principaux</a>
                 <a id="univprojects" class="selectable text-accent2">Universitaires</a>
-                <a id="sideprojects" class="selectable text-accent3">Petits projets</a>
             </div>
             <div class="container">
             <a id="fga" href="https://fga-software.xyz" class="card site">
                 <div class="project-img">
-                    <img src="data/thumbnail-fga.PNG">
+                    <img src="data/thumbnail-fga2.PNG">
                     <div class="projects-btn">
                         <div class="borders"></div>
                         <span>voir le site -></span>
@@ -113,22 +117,22 @@
                 <p>Application permettant de visualiser l'effet des paramètres de l'algorithme de bruit de Perlin. Le bruit est généré en 1D 2D et 3D sous forme de graphique, texture ou terrain.</p>
             </a>
 
-            <a id="pt" href="pages/protomuss.html" class="card">
+            <a id="mol" href="pages/mol.html" class="card">
                 <div class="project-img">
-                    <img src="data/thumbnail-pt.PNG">
+                    <img src="data/thumbnail-mol.PNG">
                     <div class="projects-btn">
                         <div class="borders"></div>
                         <span>voir les details -></span>
                     </div>
                 </div>
                 <div class="underimg">
-                    <span>Logiciel</span>
-                    <span class="languages">HTML, CSS, JS</span>
+                    <span>Script</span>
+                    <span class="languages">Python, OpenCV</span>
                 </div>
-                <span class="title">ProTomuss</span>
-                <p>Logiciel pour les étudiants de l'université de Lyon 1. Il permet de se connecter au site des notes universitaires et d'afficher les données de façon plus organisée et attractive que le site officiel.</p>
+                <span class="title">Base de données molécules</span> 
+                <p>Développement de codes pour analyser une base de données de 200 millions de molécules. Réalisé durant un stage en laboratoire.</p>
             </a>
-            
+
             <a id="dice" href="pages/dice.html" class="card">
                 <div class="project-img">
                     <img src="data/thumbnail-d.PNG">
@@ -144,27 +148,10 @@
                 <span class="title">Détection Dés temps réel</span> 
                 <p>Script qui se connecte à une caméra afin de détecter en temps réel les valeurs affichées sur les faces de dés.</p>
             </a>
-
-            <a id="minim" href="pages/minimisation.html" class="card">
-                <div class="project-img">
-                    <img src="data/thumbnail-minim.PNG">
-                    <div class="projects-btn">
-                        <div class="borders"></div>
-                        <span>voir les details -></span>
-                    </div>
-                </div>
-                <div class="underimg">
-                    <span>Simulation</span>
-                    <span class="languages">C++, ROOT(CERN)</span>
-                </div>
-                <span class="title">Minimisation</span>
-                <p>Programme permettant de tester les différents algorithmes de minimisation appliqués au problème du voyageur de commerce. Il est même possible de visualiser les étapes de calcul.</p>
-            </a>
-            </div>
         </div>
         </div>
-
-
+    </div>
+        
         <div class="copyright">©Copyright - 2022 - Odet Baptiste</div>
     </body>
 
